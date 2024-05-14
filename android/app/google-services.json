@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "201957568316",
+    "project_id": "visualvocab-1167c",
+    "storage_bucket": "visualvocab-1167c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:201957568316:android:3bf8044f2247433335b839",
+        "android_client_info": {
+          "package_name": "com.example.visvocabflutter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBe_KF8nHFtXlB-js_LiIug77Cyzk5DtCE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:201957568316:android:01d2f72bcb9f8b4c35b839",
+        "android_client_info": {
+          "package_name": "com.flutterflow.visualvocab"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBe_KF8nHFtXlB-js_LiIug77Cyzk5DtCE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

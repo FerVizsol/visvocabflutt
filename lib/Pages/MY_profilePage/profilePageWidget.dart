@@ -480,7 +480,7 @@ class _MYProfilePageWidgetState extends State<MYProfilePageWidget> {
                         setDarkModeSetting(context, ThemeMode.dark);
                       },
                       text: FFLocalizations.of(context).getText(
-                        '2ll42t1u' /* Modo Oscuro */,
+                        'dark' /* Modo Oscuro */,
                       ),
                       options: FFButtonOptions(
                         width: 130.0,
@@ -514,7 +514,7 @@ class _MYProfilePageWidgetState extends State<MYProfilePageWidget> {
                         setDarkModeSetting(context, ThemeMode.light);
                       },
                       text: FFLocalizations.of(context).getText(
-                        '8d386226' /* Modo claro */,
+                        'light' /* Modo claro */,
                       ),
                       options: FFButtonOptions(
                         width: 130.0,

@@ -47,7 +47,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
       key: scaffoldKey,
       backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
       body: Column(
-        mainAxisSize: MainAxisSize.max,
+        mainAxisSize: MainAxisSize.min,
         children: [
           Row(
             mainAxisSize: MainAxisSize.max,
@@ -102,7 +102,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                         child: SingleChildScrollView(
                           child: Column(
 
-                            mainAxisSize: MainAxisSize.max,
+                            mainAxisSize: MainAxisSize.min,
                             children: [
                               Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -128,7 +128,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                   children: [
                                     Text(
                                       FFLocalizations.of(context).getText(
-                                        'fzxvw3mu' /* Ingrese con su cuenta VisualVo... */,
+                                        'abcde' /* Ingrese con su cuenta VisualVo... */,
                                       ),
                                       style: FlutterFlowTheme.of(context)
                                           .titleMedium
@@ -397,7 +397,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                     hoverColor: Colors.transparent,
                                     highlightColor: Colors.transparent,
                                     onTap: () async {
-                                      context.pushNamed('registerAccount');
+                                      context.pushReplacementNamed('registerAccount');
                                     },
                                     child: Container(
                                       alignment: Alignment.center,

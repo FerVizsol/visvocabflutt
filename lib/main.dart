@@ -60,6 +60,7 @@ class _MyAppState extends State<MyApp> {
       Duration(milliseconds: 1000),
           () => _appStateNotifier.stopShowingSplashImage(),
     );
+
   }
 
   @override
@@ -81,7 +82,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      title: 'Fin Wallet Sample',
+      title: 'VisualVocab',
       localizationsDelegates: [
         FFLocalizationsDelegate(),
         GlobalMaterialLocalizations.delegate,

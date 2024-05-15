@@ -113,7 +113,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Welcome back',
       'ar': 'البدء',
       'de': 'Loslegen',
-      'es': 'Empezar',
+      'es': 'Empecemos',
     },
     'fzxvw3mu': {
       'en': 'Login to access your account below.',
@@ -188,7 +188,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Get Started',
       'ar': 'البدء',
       'de': 'Loslegen',
-      'es': 'Empezar',
+      'es': 'Empecemos',
     },
     'oitrrwgg': {
       'en': 'Create your account below.',
@@ -766,10 +766,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // MY_profilePage
   {
     'f1bvbey3': {
-      'en': 'My Account',
+      'en': 'My VisualVocab Account',
       'ar': 'حسابي',
       'de': 'Mein Konto',
-      'es': 'Mi cuenta',
+      'es': 'Mi cuenta VisualVocab',
     },
     'i61y9ibx': {
       'en': 'Edit Profile',
@@ -2553,5 +2553,17 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'de': '',
       'es': '',
     },
+    'abcde':{
+      'en' :'Login with your VisVocab Account',
+      'es' : 'Ingresa con tu cuenta VisVocab'
+    },
+    'dark':{
+      'en' : 'Dark Mode',
+      'es' : 'Tema oscuro'
+    },
+    'light':{
+      'en' : 'Light Mode',
+      'es' : 'Tema claro'
+    }
   },
 ].reduce((a, b) => a..addAll(b));

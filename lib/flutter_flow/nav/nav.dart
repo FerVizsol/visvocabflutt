@@ -5,6 +5,8 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:go_router/go_router.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
+import 'package:visvocabflutter/Pages/completePerfil/completePerfilWidget.dart';
+import 'package:visvocabflutter/Pages/registerPage/registerPageWidget.dart';
 import '../../Pages/Home/HomeWidget.dart';
 import '/backend/backend.dart';
 
@@ -85,29 +87,28 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) =>
-              LoginPageWidget(),
+          builder: (context, params) =>
+              const LoginPageWidget(),
         ),
         FFRoute(
           name: 'loginPage',
           path: '/loginPage',
-          builder: (context, params) => LoginPageWidget(),
+          builder: (context, params) => const LoginPageWidget(),
         ),
         FFRoute(
           name: 'Home',
           path: '/Home',
           builder: (context, params) => appStateNotifier.loggedIn ? NavBarPage() : HomeWidget(),
-        ),/*
+        ),
         FFRoute(
+          name: 'registerAccount',
+          path: '/registerPageModel',
+          builder: (context, params) => const RegisterAccountWidget(),
+        ),FFRoute(
           name: 'completeProfile',
           path: '/completeProfile',
           builder: (context, params) => CompleteProfileWidget(),
-        ),
-        FFRoute(
-          name: 'forgotPassword',
-          path: '/forgotPassword',
-          builder: (context, params) => ForgotPasswordWidget(),
-        ),
+        ),/*
         FFRoute(
           name: 'onboarding',
           path: '/onboarding',
@@ -430,11 +431,11 @@ class FFRoute {
               : builder(context, ffParams);
           final child = appStateNotifier.loading
               ? Container(
-                  color: Colors.transparent,
+                  color: Colors.white,
                   child: Center(
                     child: Image.asset(
-                      'assets/images/Medical_ScheduleApp_0.0.png',
-                      width: MediaQuery.sizeOf(context).width * 1.0,
+                      'assets/images/Sin_titulo-1.png',
+                      width: MediaQuery.sizeOf(context).width * 0.8,
                       fit: BoxFit.fitWidth,
                     ),
                   ),

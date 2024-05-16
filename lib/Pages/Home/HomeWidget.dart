@@ -212,7 +212,9 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
                                         Text(
-                                          'PRACTICAR',
+                                        FFLocalizations.of(context).getText(
+                                          'hom1'
+                                        ),
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
@@ -242,7 +244,9 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                                           EdgeInsetsDirectional.fromSTEB(
                                               0.0, 0.0, 8.0, 0.0),
                                           child: Text(
-                                            '0/48 PENDIENTES',
+                                            FFLocalizations.of(context).getText(
+                                              'hom2'
+                                            ),
                                             style: FlutterFlowTheme.of(context)
                                                 .displaySmall
                                                 .override(
@@ -279,71 +283,90 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Container(
-                            width: MediaQuery.sizeOf(context).width * 0.44,
-                            decoration: BoxDecoration(
-                              color: FlutterFlowTheme.of(context)
-                                  .secondaryBackground,
-                              boxShadow: [
-                                BoxShadow(
-                                  blurRadius: 4.0,
-                                  color: Color(0x3F14181B),
-                                  offset: Offset(
-                                    0.0,
-                                    3.0,
+                          InkWell(
+                            splashColor: Colors.transparent,
+                            focusColor: Colors.transparent,
+                            hoverColor: Colors.transparent,
+                            highlightColor: Colors.transparent,
+                            onTap: ()async {
+                              context.pushNamed(
+                                'deteccionObjetos',
+                                extra:<String,dynamic>{
+                                  kTransitionInfoKey: TransitionInfo(
+                                    hasTransition: true,
+                                    transitionType: PageTransitionType.fade,
+                                    duration: Duration(milliseconds: 100),
                                   ),
-                                )
-                              ],
-                              borderRadius: BorderRadius.circular(8.0),
-                            ),
-                            child: Padding(
-                              padding: EdgeInsets.all(12.0),
-                              child: Column(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'Agregar nuevos objetos a traves de tu camara.',
-                                    textAlign: TextAlign.start,
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodySmall
-                                        .override(
-                                      fontFamily: 'Lexend',
-                                      letterSpacing: 0.0,
+                                },
+                              );
+                            },
+                            child:
+                            Container(
+                              width: MediaQuery.sizeOf(context).width * 0.44,
+                              decoration: BoxDecoration(
+                                color: FlutterFlowTheme.of(context)
+                                    .secondaryBackground,
+                                boxShadow: [
+                                  BoxShadow(
+                                    blurRadius: 4.0,
+                                    color: Color(0x3F14181B),
+                                    offset: Offset(
+                                      0.0,
+                                      3.0,
                                     ),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 8.0, 0.0, 12.0),
-                                    child: Text(
-                                      'AGREGAR OBJETOS',
-                                      textAlign: TextAlign.center,
+                                  )
+                                ],
+                                borderRadius: BorderRadius.circular(8.0),
+                              ),
+                              child: Padding(
+                                padding: EdgeInsets.all(12.0),
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      FFLocalizations.of(context).getText('hom3'),
+                                      textAlign: TextAlign.start,
                                       style: FlutterFlowTheme.of(context)
-                                          .displaySmall
+                                          .bodySmall
                                           .override(
                                         fontFamily: 'Lexend',
-                                        color: FlutterFlowTheme.of(context)
-                                            .tertiary,
-                                        fontSize: 30.0,
                                         letterSpacing: 0.0,
                                       ),
                                     ),
-                                  ),
-                                  Align(
-                                    alignment: AlignmentDirectional(0.0, 0.0),
-                                    child: Icon(
-                                      Icons.camera_alt,
-                                      color:
-                                      FlutterFlowTheme.of(context).tertiary,
-                                      size: 50.0,
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          0.0, 8.0, 0.0, 12.0),
+                                      child: Text(
+                                        FFLocalizations.of(context).getText('hom4'),
+                                        textAlign: TextAlign.center,
+                                        style: FlutterFlowTheme.of(context)
+                                            .displaySmall
+                                            .override(
+                                          fontFamily: 'Lexend',
+                                          color: FlutterFlowTheme.of(context)
+                                              .tertiary,
+                                          fontSize: 30.0,
+                                          letterSpacing: 0.0,
+                                        ),
+                                      ),
                                     ),
-                                  ),
-                                ],
+                                    Align(
+                                      alignment: AlignmentDirectional(0.0, 0.0),
+                                      child: Icon(
+                                        Icons.camera_alt,
+                                        color:
+                                        FlutterFlowTheme.of(context).tertiary,
+                                        size: 50.0,
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
-                            ),
-                          ).animateOnPageLoad(
-                              animationsMap['containerOnPageLoadAnimation1']!),
+                            ).animateOnPageLoad(
+                                animationsMap['containerOnPageLoadAnimation1']!),
+                          ),
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.44,
                             decoration: BoxDecoration(
@@ -369,7 +392,7 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    'Revisa las palabras guardadas en tu vocabulario.',
+                                    FFLocalizations.of(context).getText('hom5'),
                                     textAlign: TextAlign.start,
                                     style: FlutterFlowTheme.of(context)
                                         .bodySmall
@@ -382,7 +405,7 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 8.0, 0.0, 12.0),
                                     child: Text(
-                                      'MI VOCAB',
+                                      FFLocalizations.of(context).getText('hom6'),
                                       textAlign: TextAlign.center,
                                       style: FlutterFlowTheme.of(context)
                                           .displaySmall

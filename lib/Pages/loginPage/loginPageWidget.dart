@@ -316,7 +316,9 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                       onPressed: () async {
                                         context.pushNamed('forgotPassword');
                                       },
-                                      text: 'Haz olvidado tu contraseña?',
+                                      text: FFLocalizations.of(context).getText(
+                                        'ing4'
+                                      ),
                                       options: FFButtonOptions(
                                         width: 170.0,
                                         height: 40.0,
@@ -360,7 +362,10 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                       context.goNamedAuth(
                                           'Home', context.mounted);
                                     },
-                                    text: 'Ingresar',
+                                    text:
+                                    FFLocalizations.of(context).getText(
+                                      'ing1'
+                                    ),
                                     options: FFButtonOptions(
                                       width: 120.0,
                                       height: 50.0,
@@ -412,7 +417,9 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                         children: [
                                           Flexible(
                                             child: Text(
-                                              'No tienes una cuenta?',
+                                              FFLocalizations.of(context).getText(
+                                                'ing2'
+                                              ),
                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                 fontFamily: 'Lexend',
                                                 letterSpacing: 0.0,
@@ -422,7 +429,9 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                           SizedBox(width: 8.0), // Adjust the spacing between widgets
                                           Flexible(
                                             child: Text(
-                                              'Crear Cuenta',
+                                                FFLocalizations.of(context).getText(
+                                                  'ing3'
+                                                ),
                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                 fontFamily: 'Lexend',
                                                 color: FlutterFlowTheme.of(context).primary,

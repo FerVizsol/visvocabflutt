@@ -125,6 +125,7 @@ class _MYProfilePageWidgetState extends State<MYProfilePageWidget> {
                                     ),
                                     child: Image.network(
                                       mYProfilePageUsersRecord.photoUrl,
+                                      fit:BoxFit.cover,
                                     ),
                                   ),
                                 ),

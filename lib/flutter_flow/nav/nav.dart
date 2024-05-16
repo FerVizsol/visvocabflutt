@@ -5,7 +5,11 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:go_router/go_router.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
+import 'package:visvocabflutter/Pages/changePassword/changePasswordWidget.dart';
 import 'package:visvocabflutter/Pages/completePerfil/completePerfilWidget.dart';
+import 'package:visvocabflutter/Pages/deteccionObjetos/deteccionObjetosWidget.dart';
+import 'package:visvocabflutter/Pages/editProfile/editProfileWidget.dart';
+import 'package:visvocabflutter/Pages/forgotPassword/forgotPasswordWidget.dart';
 import 'package:visvocabflutter/Pages/registerPage/registerPageWidget.dart';
 import '../../Pages/Home/HomeWidget.dart';
 import '/backend/backend.dart';
@@ -82,7 +86,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       initialLocation: '/',
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
-      errorBuilder: (context, state) => LoginPageWidget(),
+      errorBuilder: (context, state) => const LoginPageWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
@@ -98,7 +102,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'Home',
           path: '/Home',
-          builder: (context, params) => appStateNotifier.loggedIn ? NavBarPage() : HomeWidget(),
+          builder: (context, params) => appStateNotifier.loggedIn ? NavBarPage() : const HomeWidget(),
         ),
         FFRoute(
           name: 'registerAccount',
@@ -107,7 +111,28 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         ),FFRoute(
           name: 'completeProfile',
           path: '/completeProfile',
-          builder: (context, params) => CompleteProfileWidget(),
+          builder: (context, params) => const CompleteProfileWidget(),
+        ),
+          FFRoute(
+          name: 'changePassword',
+          path: '/changePassword',
+          builder: (context, params) => const ChangePasswordWidget(),
+        ),
+        FFRoute(
+          name: 'editProfile',
+          path: '/editProfile',
+          builder: (context, params) => EditProfileWidget(
+            userProfile: params.getParam(
+                'userProfile', ParamType.DocumentReference, false, ['users']),
+          ),
+        ),FFRoute(
+          name: 'deteccionObjetos',
+          path: '/deteccionObjetos',
+          builder: (context, params) => const DeteccionObjetosWidget(),
+        ),FFRoute(
+          name: 'forgotPassword',
+          path: '/forgotPassword',
+          builder: (context, params) => const ForgotPasswordWidget(),
         ),/*
         FFRoute(
           name: 'onboarding',
@@ -201,11 +226,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             userProfile: params.getParam(
                 'userProfile', ParamType.DocumentReference, false, ['users']),
           ),
-        ),
-        FFRoute(
-          name: 'changePassword',
-          path: '/changePassword',
-          builder: (context, params) => ChangePasswordWidget(),
         ),
         FFRoute(
           name: 'notificationsSettings',

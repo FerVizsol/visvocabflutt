@@ -2564,6 +2564,66 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'light':{
       'en' : 'Light Mode',
       'es' : 'Tema claro'
+    },
+    'l5u54vm1':{
+      'en':'Detect Objects',
+      'es':'Detectar Objetos',
+    },
+    't5d8mv4i':{
+      'en':'Add new objects with your camera.',
+      'es':'Agrega nuevos objetos a traves de tu camara.',
+    },
+    '9njfe3ca':{
+      'en':'TAKE A PICTURE OF THE OBJECT',
+      'es':'TOMAR FOTO DE OBJETO'
+    },
+    'i6geiyyv':{
+      'en':'Upload an image of the object from your gallery.',
+      'es':'Subir una imagen del objeto a traves de la galeria.',
+    },
+    'i84ae42y':{
+      'en':'UPLOAD FROM GALLERY',
+      'es':'SUBIR DESDE GALERIA'
+    },
+    'ing1':{
+      'en':'Login',
+      'es':'Ingresar',
+    },
+    'ing2':{
+      'en':"Don't have an account?",
+      'es':'No tienes una cuenta?',
+    },
+    'ing3':{
+      'en':'Create account',
+      'es':'Crear cuenta',
+    },
+    'ing4':{
+      'en':'Forgot your password?',
+      'es':'Olvidaste tu contraseña?',
+    },
+    'hom1':{
+      'en':'PRACTICE',
+      'es':'PRACTICAR',
+    },
+    'hom2':{
+      'en':'REMAINING',
+      'es':'PENDIENTES'
+    },
+    'hom3':{
+      'en':'Add new objects using your camera.'
+      ,'es':'Agregar nuevos objetos a traves de tu camara.'
+    },
+    'hom4':{
+      'en':'ADD OBJECTS',
+      'es':'AGREGAR OBJETOS',
+    },
+    'hom5':{
+      'en':'Check your saved words on your vocabulary'
+      ,'es':'Revisa las palabras guardadas en tu vocabulario',
+    },
+    'hom6':{
+      'en':'MY VOCAB'
+      ,'es':'MI VOCAB',
     }
   },
 ].reduce((a, b) => a..addAll(b));

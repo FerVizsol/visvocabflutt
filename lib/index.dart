@@ -6,3 +6,4 @@ export '/Pages/editProfile/editProfileModel.dart' show EditProfileModel;
 export '/Pages/changePassword/changePasswordModel.dart' show ChangePasswordModel;
 export '/Pages/deteccionObjetos/deteccionObjetosModel.dart' show DeteccionObjetosModel;
 export '/Pages/forgotPassword/forgotPasswordModel.dart' show ForgotPasswordModel;
+export '/Pages/flashcards/flashcardsPage.dart';

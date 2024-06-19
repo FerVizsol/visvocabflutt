@@ -1,1013 +1,1013 @@
-description: Ultralytics YOLOv8n-cls model trained on datasets/imagenet-mini
 author: Ultralytics
-date: '2024-05-12T20:34:22.508251'
-version: 8.2.8
-license: AGPL-3.0 License (https://ultralytics.com/license)
-docs: https://docs.ultralytics.com
-stride: 1
-task: classify
 batch: 1
+date: '2024-05-12T20:34:22.508251'
+description: Ultralytics YOLOv8n-cls model trained on datasets/imagenet-mini
+docs: https://docs.ultralytics.com
 imgsz:
-- 320
-- 320
+  - 320
+  - 320
+license: AGPL-3.0 License (https://ultralytics.com/license)
 names:
-  0: tench
-  1: goldfish
-  2: great_white_shark
-  3: tiger_shark
-  4: hammerhead
-  5: electric_ray
-  6: stingray
-  7: cock
-  8: hen
-  9: ostrich
-  10: brambling
-  11: goldfinch
-  12: house_finch
-  13: junco
-  14: indigo_bunting
-  15: robin
-  16: bulbul
-  17: jay
-  18: magpie
-  19: chickadee
-  20: water_ouzel
-  21: kite
-  22: bald_eagle
-  23: vulture
-  24: great_grey_owl
-  25: European_fire_salamander
-  26: common_newt
-  27: eft
-  28: spotted_salamander
-  29: axolotl
-  30: bullfrog
-  31: tree_frog
-  32: tailed_frog
-  33: loggerhead
-  34: leatherback_turtle
-  35: mud_turtle
-  36: terrapin
-  37: box_turtle
-  38: banded_gecko
-  39: common_iguana
-  40: American_chameleon
-  41: whiptail
-  42: agama
-  43: frilled_lizard
-  44: alligator_lizard
-  45: Gila_monster
-  46: green_lizard
-  47: African_chameleon
-  48: Komodo_dragon
-  49: African_crocodile
-  50: American_alligator
-  51: triceratops
-  52: thunder_snake
-  53: ringneck_snake
-  54: hognose_snake
-  55: green_snake
-  56: king_snake
-  57: garter_snake
-  58: water_snake
-  59: vine_snake
-  60: night_snake
-  61: boa_constrictor
-  62: rock_python
-  63: Indian_cobra
-  64: green_mamba
-  65: sea_snake
-  66: horned_viper
-  67: diamondback
-  68: sidewinder
-  69: trilobite
-  70: harvestman
-  71: scorpion
-  72: black_and_gold_garden_spider
-  73: barn_spider
-  74: garden_spider
-  75: black_widow
-  76: tarantula
-  77: wolf_spider
-  78: tick
-  79: centipede
-  80: black_grouse
-  81: ptarmigan
-  82: ruffed_grouse
-  83: prairie_chicken
-  84: peacock
-  85: quail
-  86: partridge
-  87: African_grey
-  88: macaw
-  89: sulphur-crested_cockatoo
-  90: lorikeet
-  91: coucal
-  92: bee_eater
-  93: hornbill
-  94: hummingbird
-  95: jacamar
-  96: toucan
-  97: drake
-  98: red-breasted_merganser
-  99: goose
-  100: black_swan
-  101: tusker
-  102: echidna
-  103: platypus
-  104: wallaby
-  105: koala
-  106: wombat
-  107: jellyfish
-  108: sea_anemone
-  109: brain_coral
-  110: flatworm
-  111: nematode
-  112: conch
-  113: snail
-  114: slug
-  115: sea_slug
-  116: chiton
-  117: chambered_nautilus
-  118: Dungeness_crab
-  119: rock_crab
-  120: fiddler_crab
-  121: king_crab
-  122: American_lobster
-  123: spiny_lobster
-  124: crayfish
-  125: hermit_crab
-  126: isopod
-  127: white_stork
-  128: black_stork
-  129: spoonbill
-  130: flamingo
-  131: little_blue_heron
-  132: American_egret
-  133: bittern
-  134: crane_(bird)
-  135: limpkin
-  136: European_gallinule
-  137: American_coot
-  138: bustard
-  139: ruddy_turnstone
-  140: red-backed_sandpiper
-  141: redshank
-  142: dowitcher
-  143: oystercatcher
-  144: pelican
-  145: king_penguin
-  146: albatross
-  147: grey_whale
-  148: killer_whale
-  149: dugong
-  150: sea_lion
+  0: Tench
+  1: Goldfish
+  2: Great white shark
+  3: Tiger shark
+  4: Hammerhead
+  5: Electric ray
+  6: Stingray
+  7: Cock
+  8: Hen
+  9: Ostrich
+  10: Brambling
+  11: Goldfinch
+  12: House finch
+  13: Junco
+  14: Indigo bunting
+  15: Robin
+  16: Bulbul
+  17: Jay
+  18: Magpie
+  19: Chickadee
+  20: Water ouzel
+  21: Kite
+  22: Bald eagle
+  23: Vulture
+  24: Great grey owl
+  25: European fire salamander
+  26: Common newt
+  27: Eft
+  28: Spotted salamander
+  29: Axolotl
+  30: Bullfrog
+  31: Tree frog
+  32: Tailed frog
+  33: Loggerhead
+  34: Leatherback turtle
+  35: Mud turtle
+  36: Terrapin
+  37: Box turtle
+  38: Banded gecko
+  39: Common iguana
+  40: American chameleon
+  41: Whiptail
+  42: Agama
+  43: Frilled lizard
+  44: Alligator lizard
+  45: Gila monster
+  46: Green lizard
+  47: African chameleon
+  48: Komodo dragon
+  49: African crocodile
+  50: American alligator
+  51: Triceratops
+  52: Thunder snake
+  53: Ringneck snake
+  54: Hognose snake
+  55: Green snake
+  56: King snake
+  57: Garter snake
+  58: Water snake
+  59: Vine snake
+  60: Night snake
+  61: Boa constrictor
+  62: Rock python
+  63: Indian cobra
+  64: Green mamba
+  65: Sea snake
+  66: Horned viper
+  67: Diamondback
+  68: Sidewinder
+  69: Trilobite
+  70: Harvestman
+  71: Scorpion
+  72: Black and gold garden spider
+  73: Barn spider
+  74: Garden spider
+  75: Black widow
+  76: Tarantula
+  77: Wolf spider
+  78: Tick
+  79: Centipede
+  80: Black grouse
+  81: Ptarmigan
+  82: Ruffed grouse
+  83: Prairie chicken
+  84: Peacock
+  85: Quail
+  86: Partridge
+  87: African grey
+  88: Macaw
+  89: Sulphur-crested cockatoo
+  90: Lorikeet
+  91: Coucal
+  92: Bee eater
+  93: Hornbill
+  94: Hummingbird
+  95: Jacamar
+  96: Toucan
+  97: Drake
+  98: Red-breasted Merganser
+  99: Goose
+  100: Black Swan
+  101: Tusker
+  102: Echidna
+  103: Platypus
+  104: Wallaby
+  105: Koala
+  106: Wombat
+  107: Jellyfish
+  108: Sea Anemone
+  109: Brain Coral
+  110: Flatworm
+  111: Nematode
+  112: Conch
+  113: Snail
+  114: Slug
+  115: Sea Slug
+  116: Chiton
+  117: Chambered Nautilus
+  118: Dungeness Crab
+  119: Rock Crab
+  120: Fiddler Crab
+  121: King Crab
+  122: American Lobster
+  123: Spiny Lobster
+  124: Crayfish
+  125: Hermit Crab
+  126: Isopod
+  127: White Stork
+  128: Black Stork
+  129: Spoonbill
+  130: Flamingo
+  131: Little Blue Heron
+  132: American Egret
+  133: Bittern
+  134: Crane (bird)
+  135: Limpkin
+  136: European Gallinule
+  137: American Coot
+  138: Bustard
+  139: Ruddy Turnstone
+  140: Red-backed Sandpiper
+  141: Redshank
+  142: Dowitcher
+  143: Oystercatcher
+  144: Pelican
+  145: King Penguin
+  146: Albatross
+  147: Grey Whale
+  148: Killer Whale
+  149: Dugong
+  150: Sea Lion
   151: Chihuahua
-  152: Japanese_spaniel
-  153: Maltese_dog
+  152: Japanese Spaniel
+  153: Maltese Dog
   154: Pekinese
-  155: Shih-Tzu
-  156: Blenheim_spaniel
-  157: papillon
-  158: toy_terrier
-  159: Rhodesian_ridgeback
-  160: Afghan_hound
-  161: basset
-  162: beagle
-  163: bloodhound
-  164: bluetick
-  165: black-and-tan_coonhound
-  166: Walker_hound
-  167: English_foxhound
-  168: redbone
-  169: borzoi
-  170: Irish_wolfhound
-  171: Italian_greyhound
-  172: whippet
-  173: Ibizan_hound
-  174: Norwegian_elkhound
-  175: otterhound
+  155: Shih-tzu
+  156: Blenheim Spaniel
+  157: Papillon
+  158: Toy Terrier
+  159: Rhodesian Ridgeback
+  160: Afghan Hound
+  161: Basset
+  162: Beagle
+  163: Bloodhound
+  164: Bluetick
+  165: Black-and-tan Coonhound
+  166: Walker Hound
+  167: English Foxhound
+  168: Redbone
+  169: Borzoi
+  170: Irish Wolfhound
+  171: Italian Greyhound
+  172: Whippet
+  173: Ibizan Hound
+  174: Norwegian Elkhound
+  175: Otterhound
   176: Saluki
-  177: Scottish_deerhound
+  177: Scottish Deerhound
   178: Weimaraner
-  179: Staffordshire_bullterrier
-  180: American_Staffordshire_terrier
-  181: Bedlington_terrier
-  182: Border_terrier
-  183: Kerry_blue_terrier
-  184: Irish_terrier
-  185: Norfolk_terrier
-  186: Norwich_terrier
-  187: Yorkshire_terrier
-  188: wire-haired_fox_terrier
-  189: Lakeland_terrier
-  190: Sealyham_terrier
+  179: Staffordshire Bullterrier
+  180: American Staffordshire Terrier
+  181: Bedlington Terrier
+  182: Border Terrier
+  183: Kerry Blue Terrier
+  184: Irish Terrier
+  185: Norfolk Terrier
+  186: Norwich Terrier
+  187: Yorkshire Terrier
+  188: Wire-haired Fox Terrier
+  189: Lakeland Terrier
+  190: Sealyham Terrier
   191: Airedale
-  192: cairn
-  193: Australian_terrier
-  194: Dandie_Dinmont
-  195: Boston_bull
-  196: miniature_schnauzer
-  197: giant_schnauzer
-  198: standard_schnauzer
-  199: Scotch_terrier
-  200: Tibetan_terrier
-  201: silky_terrier
-  202: soft-coated_wheaten_terrier
-  203: West_Highland_white_terrier
+  192: Cairn
+  193: Australian Terrier
+  194: Dandie Dinmont
+  195: Boston Bull
+  196: Miniature Schnauzer
+  197: Giant Schnauzer
+  198: Standard Schnauzer
+  199: Scotch Terrier
+  200: Tibetan Terrier
+  201: Silky Terrier
+  202: Soft-coated Wheaten Terrier
+  203: West Highland White Terrier
   204: Lhasa
-  205: flat-coated_retriever
-  206: curly-coated_retriever
-  207: golden_retriever
-  208: Labrador_retriever
-  209: Chesapeake_Bay_retriever
-  210: German_short-haired_pointer
-  211: vizsla
-  212: English_setter
-  213: Irish_setter
-  214: Gordon_setter
-  215: Brittany_spaniel
-  216: clumber
-  217: English_springer
-  218: Welsh_springer_spaniel
-  219: cocker_spaniel
-  220: Sussex_spaniel
-  221: Irish_water_spaniel
-  222: kuvasz
-  223: schipperke
-  224: groenendael
-  225: malinois
-  226: briard
-  227: kelpie
-  228: komondor
-  229: Old_English_sheepdog
-  230: Shetland_sheepdog
-  231: collie
-  232: Border_collie
-  233: Bouvier_des_Flandres
+  205: Flat-coated Retriever
+  206: Curly-coated Retriever
+  207: Golden Retriever
+  208: Labrador Retriever
+  209: Chesapeake Bay Retriever
+  210: German Short-haired Pointer
+  211: Vizsla
+  212: English Setter
+  213: Irish Setter
+  214: Gordon Setter
+  215: Brittany Spaniel
+  216: Clumber
+  217: English Springer
+  218: Welsh Springer Spaniel
+  219: Cocker Spaniel
+  220: Sussex Spaniel
+  221: Irish Water Spaniel
+  222: Kuvasz
+  223: Schipperke
+  224: Groenendael
+  225: Malinois
+  226: Briard
+  227: Kelpie
+  228: Komondor
+  229: Old English Sheepdog
+  230: Shetland Sheepdog
+  231: Collie
+  232: Border Collie
+  233: Bouvier Des Flandres
   234: Rottweiler
-  235: German_shepherd
+  235: German Shepherd
   236: Doberman
-  237: miniature_pinscher
-  238: Greater_Swiss_Mountain_dog
-  239: Bernese_mountain_dog
+  237: Miniature Pinscher
+  238: Greater Swiss Mountain Dog
+  239: Bernese Mountain Dog
   240: Appenzeller
-  241: EntleBucher
-  242: boxer
-  243: bull_mastiff
-  244: Tibetan_mastiff
-  245: French_bulldog
-  246: Great_Dane
-  247: Saint_Bernard
-  248: Eskimo_dog
-  249: malamute
-  250: Siberian_husky
-  251: dalmatian
-  252: affenpinscher
-  253: basenji
-  254: pug
+  241: Entlebucher
+  242: Boxer
+  243: Bull Mastiff
+  244: Tibetan Mastiff
+  245: French Bulldog
+  246: Great Dane
+  247: Saint Bernard
+  248: Eskimo Dog
+  249: Malamute
+  250: Siberian Husky
+  251: Dalmatian
+  252: Affenpinscher
+  253: Basenji
+  254: Pug
   255: Leonberg
   256: Newfoundland
-  257: Great_Pyrenees
+  257: Great Pyrenees
   258: Samoyed
   259: Pomeranian
-  260: chow
-  261: keeshond
-  262: Brabancon_griffon
+  260: Chow
+  261: Keeshond
+  262: Brabancon Griffon
   263: Pembroke
   264: Cardigan
-  265: toy_poodle
-  266: miniature_poodle
-  267: standard_poodle
-  268: Mexican_hairless
-  269: timber_wolf
-  270: white_wolf
-  271: red_wolf
-  272: coyote
-  273: dingo
-  274: dhole
-  275: African_hunting_dog
-  276: hyena
-  277: red_fox
-  278: kit_fox
-  279: Arctic_fox
-  280: grey_fox
-  281: tabby
-  282: tiger_cat
-  283: Persian_cat
-  284: Siamese_cat
-  285: Egyptian_cat
-  286: cougar
-  287: lynx
-  288: leopard
-  289: snow_leopard
-  290: jaguar
-  291: lion
-  292: tiger
-  293: cheetah
-  294: brown_bear
-  295: American_black_bear
-  296: ice_bear
-  297: sloth_bear
-  298: mongoose
-  299: meerkat
-  300: tiger_beetle
-  301: ladybug
-  302: ground_beetle
-  303: long-horned_beetle
-  304: leaf_beetle
-  305: dung_beetle
-  306: rhinoceros_beetle
-  307: weevil
-  308: fly
-  309: bee
-  310: ant
-  311: grasshopper
-  312: cricket
-  313: walking_stick
-  314: cockroach
-  315: mantis
-  316: cicada
-  317: leafhopper
-  318: lacewing
-  319: dragonfly
-  320: damselfly
-  321: admiral
-  322: ringlet
-  323: monarch
-  324: cabbage_butterfly
-  325: sulphur_butterfly
-  326: lycaenid
-  327: starfish
-  328: sea_urchin
-  329: sea_cucumber
-  330: wood_rabbit
-  331: hare
+  265: Toy Poodle
+  266: Miniature Poodle
+  267: Standard Poodle
+  268: Mexican Hairless
+  269: Timber Wolf
+  270: White Wolf
+  271: Red Wolf
+  272: Coyote
+  273: Dingo
+  274: Dhole
+  275: African Hunting Dog
+  276: Hyena
+  277: Red Fox
+  278: Kit Fox
+  279: Arctic Fox
+  280: Grey Fox
+  281: Tabby
+  282: Tiger Cat
+  283: Persian Cat
+  284: Siamese Cat
+  285: Egyptian Cat
+  286: Cougar
+  287: Lynx
+  288: Leopard
+  289: Snow Leopard
+  290: Jaguar
+  291: Lion
+  292: Tiger
+  293: Cheetah
+  294: Brown Bear
+  295: American Black Bear
+  296: Ice Bear
+  297: Sloth Bear
+  298: Mongoose
+  299: Meerkat
+  300: Tiger Beetle
+  301: Ladybug
+  302: Ground Beetle
+  303: Long-horned Beetle
+  304: Leaf Beetle
+  305: Dung Beetle
+  306: Rhinoceros Beetle
+  307: Weevil
+  308: Fly
+  309: Bee
+  310: Ant
+  311: Grasshopper
+  312: Cricket
+  313: Walking Stick
+  314: Cockroach
+  315: Mantis
+  316: Cicada
+  317: Leafhopper
+  318: Lacewing
+  319: Dragonfly
+  320: Damselfly
+  321: Admiral
+  322: Ringlet
+  323: Monarch
+  324: Cabbage Butterfly
+  325: Sulphur Butterfly
+  326: Lycaenid
+  327: Starfish
+  328: Sea Urchin
+  329: Sea Cucumber
+  330: Wood Rabbit
+  331: Hare
   332: Angora
-  333: hamster
-  334: porcupine
-  335: fox_squirrel
-  336: marmot
-  337: beaver
-  338: guinea_pig
-  339: sorrel
-  340: zebra
-  341: hog
-  342: wild_boar
-  343: warthog
-  344: hippopotamus
-  345: ox
-  346: water_buffalo
-  347: bison
-  348: ram
-  349: bighorn
-  350: ibex
-  351: hartebeest
-  352: impala
-  353: gazelle
-  354: Arabian_camel
-  355: llama
-  356: weasel
-  357: mink
-  358: polecat
-  359: black-footed_ferret
-  360: otter
-  361: skunk
-  362: badger
-  363: armadillo
-  364: three-toed_sloth
-  365: orangutan
-  366: gorilla
-  367: chimpanzee
-  368: gibbon
-  369: siamang
-  370: guenon
-  371: patas
-  372: baboon
-  373: macaque
-  374: langur
-  375: colobus
-  376: proboscis_monkey
-  377: marmoset
-  378: capuchin
-  379: howler_monkey
-  380: titi
-  381: spider_monkey
-  382: squirrel_monkey
-  383: Madagascar_cat
-  384: indri
-  385: Indian_elephant
-  386: African_elephant
-  387: lesser_panda
-  388: giant_panda
-  389: barracouta
-  390: eel
-  391: coho
-  392: rock_beauty
-  393: anemone_fish
-  394: sturgeon
-  395: gar
-  396: lionfish
-  397: puffer
-  398: abacus
-  399: abaya
-  400: academic_gown
-  401: accordion
-  402: acoustic_guitar
-  403: aircraft_carrier
-  404: airliner
-  405: airship
-  406: altar
-  407: ambulance
-  408: amphibian
-  409: analog_clock
-  410: apiary
-  411: apron
-  412: ashcan
-  413: assault_rifle
-  414: backpack
-  415: bakery
-  416: balance_beam
-  417: balloon
-  418: ballpoint
-  419: Band_Aid
-  420: banjo
-  421: bannister
-  422: barbell
-  423: barber_chair
-  424: barbershop
-  425: barn
-  426: barometer
-  427: barrel
-  428: barrow
-  429: baseball
-  430: basketball
-  431: bassinet
-  432: bassoon
-  433: bathing_cap
-  434: bath_towel
-  435: bathtub
-  436: beach_wagon
-  437: beacon
-  438: beaker
-  439: bearskin
-  440: beer_bottle
-  441: beer_glass
-  442: bell_cote
-  443: bib
-  444: bicycle-built-for-two
-  445: bikini
-  446: binder
-  447: binoculars
-  448: birdhouse
-  449: boathouse
-  450: bobsled
-  451: bolo_tie
-  452: bonnet
-  453: bookcase
-  454: bookshop
-  455: bottlecap
-  456: bow
-  457: bow_tie
-  458: brass
-  459: brassiere
-  460: breakwater
-  461: breastplate
-  462: broom
-  463: bucket
-  464: buckle
-  465: bulletproof_vest
-  466: bullet_train
-  467: butcher_shop
-  468: cab
-  469: caldron
-  470: candle
-  471: cannon
-  472: canoe
-  473: can_opener
-  474: cardigan
-  475: car_mirror
-  476: carousel
-  477: carpenter's_kit
-  478: carton
-  479: car_wheel
-  480: cash_machine
-  481: cassette
-  482: cassette_player
-  483: castle
-  484: catamaran
-  485: CD_player
-  486: cello
-  487: cellular_telephone
-  488: chain
-  489: chainlink_fence
-  490: chain_mail
-  491: chain_saw
-  492: chest
-  493: chiffonier
-  494: chime
-  495: china_cabinet
-  496: Christmas_stocking
-  497: church
-  498: cinema
-  499: cleaver
-  500: cliff_dwelling
-  501: cloak
-  502: clog
-  503: cocktail_shaker
-  504: coffee_mug
-  505: coffeepot
-  506: coil
-  507: combination_lock
-  508: computer_keyboard
-  509: confectionery
-  510: container_ship
-  511: convertible
-  512: corkscrew
-  513: cornet
-  514: cowboy_boot
-  515: cowboy_hat
-  516: cradle
-  517: crane_(machine)
-  518: crash_helmet
-  519: crate
-  520: crib
-  521: Crock_Pot
-  522: croquet_ball
-  523: crutch
-  524: cuirass
-  525: dam
-  526: desk
-  527: desktop_computer
-  528: dial_telephone
-  529: diaper
-  530: digital_clock
-  531: digital_watch
-  532: dining_table
-  533: dishrag
-  534: dishwasher
-  535: disk_brake
-  536: dock
-  537: dogsled
-  538: dome
-  539: doormat
-  540: drilling_platform
-  541: drum
-  542: drumstick
-  543: dumbbell
-  544: Dutch_oven
-  545: electric_fan
-  546: electric_guitar
-  547: electric_locomotive
-  548: entertainment_center
-  549: envelope
-  550: espresso_maker
-  551: face_powder
-  552: feather_boa
-  553: file
-  554: fireboat
-  555: fire_engine
-  556: fire_screen
-  557: flagpole
-  558: flute
-  559: folding_chair
-  560: football_helmet
-  561: forklift
-  562: fountain
-  563: fountain_pen
-  564: four-poster
-  565: freight_car
-  566: French_horn
-  567: frying_pan
-  568: fur_coat
-  569: garbage_truck
-  570: gasmask
-  571: gas_pump
-  572: goblet
-  573: go-kart
-  574: golf_ball
-  575: golfcart
-  576: gondola
-  577: gong
-  578: gown
-  579: grand_piano
-  580: greenhouse
-  581: grille
-  582: grocery_store
-  583: guillotine
-  584: hair_slide
-  585: hair_spray
-  586: half_track
-  587: hammer
-  588: hamper
-  589: hand_blower
-  590: hand-held_computer
-  591: handkerchief
-  592: hard_disc
-  593: harmonica
-  594: harp
-  595: harvester
-  596: hatchet
-  597: holster
-  598: home_theater
-  599: honeycomb
-  600: hook
-  601: hoopskirt
-  602: horizontal_bar
-  603: horse_cart
-  604: hourglass
-  605: iPod
-  606: iron
-  607: jack-o'-lantern
-  608: jean
-  609: jeep
-  610: jersey
-  611: jigsaw_puzzle
-  612: jinrikisha
-  613: joystick
-  614: kimono
-  615: knee_pad
-  616: knot
-  617: lab_coat
-  618: ladle
-  619: lampshade
-  620: laptop
-  621: lawn_mower
-  622: lens_cap
-  623: letter_opener
-  624: library
-  625: lifeboat
-  626: lighter
-  627: limousine
-  628: liner
-  629: lipstick
+  333: Hamster
+  334: Porcupine
+  335: Fox Squirrel
+  336: Marmot
+  337: Beaver
+  338: Guinea Pig
+  339: Sorrel
+  340: Zebra
+  341: Hog
+  342: Wild Boar
+  343: Warthog
+  344: Hippopotamus
+  345: Ox
+  346: Water Buffalo
+  347: Bison
+  348: Ram
+  349: Bighorn
+  350: Ibex
+  351: Hartebeest
+  352: Impala
+  353: Gazelle
+  354: Arabian Camel
+  355: Llama
+  356: Weasel
+  357: Mink
+  358: Polecat
+  359: Black-footed Ferret
+  360: Otter
+  361: Skunk
+  362: Badger
+  363: Armadillo
+  364: Three-toed Sloth
+  365: Orangutan
+  366: Gorilla
+  367: Chimpanzee
+  368: Gibbon
+  369: Siamang
+  370: Guenon
+  371: Patas
+  372: Baboon
+  373: Macaque
+  374: Langur
+  375: Colobus
+  376: Proboscis Monkey
+  377: Marmoset
+  378: Capuchin
+  379: Howler Monkey
+  380: Titi
+  381: Spider Monkey
+  382: Squirrel Monkey
+  383: Madagascar Cat
+  384: Indri
+  385: Indian Elephant
+  386: African Elephant
+  387: Lesser Panda
+  388: Giant Panda
+  389: Barracouta
+  390: Eel
+  391: Coho
+  392: Rock Beauty
+  393: Anemone Fish
+  394: Sturgeon
+  395: Gar
+  396: Lionfish
+  397: Puffer
+  398: Abacus
+  399: Abaya
+  400: Academic Gown
+  401: Accordion
+  402: Acoustic Guitar
+  403: Aircraft Carrier
+  404: Airliner
+  405: Airship
+  406: Altar
+  407: Ambulance
+  408: Amphibian
+  409: Analog Clock
+  410: Apiary
+  411: Apron
+  412: Ashcan
+  413: Assault Rifle
+  414: Backpack
+  415: Bakery
+  416: Balance Beam
+  417: Balloon
+  418: Ballpoint
+  419: Band Aid
+  420: Banjo
+  421: Bannister
+  422: Barbell
+  423: Barber Chair
+  424: Barbershop
+  425: Barn
+  426: Barometer
+  427: Barrel
+  428: Barrow
+  429: Baseball
+  430: Basketball
+  431: Bassinet
+  432: Bassoon
+  433: Bathing Cap
+  434: Bath Towel
+  435: Bathtub
+  436: Beach Wagon
+  437: Beacon
+  438: Beaker
+  439: Bearskin
+  440: Beer Bottle
+  441: Beer Glass
+  442: Bell Cote
+  443: Bib
+  444: Bicycle-built-for-two
+  445: Bikini
+  446: Binder
+  447: Binoculars
+  448: Birdhouse
+  449: Boathouse
+  450: Bobsled
+  451: Bolo Tie
+  452: Bonnet
+  453: Bookcase
+  454: Bookshop
+  455: Bottlecap
+  456: Bow
+  457: Bow Tie
+  458: Brass
+  459: Brassiere
+  460: Breakwater
+  461: Breastplate
+  462: Broom
+  463: Bucket
+  464: Buckle
+  465: Bulletproof Vest
+  466: Bullet Train
+  467: Butcher Shop
+  468: Cab
+  469: Caldron
+  470: Candle
+  471: Cannon
+  472: Canoe
+  473: Can Opener
+  474: Cardigan
+  475: Car Mirror
+  476: Carousel
+  477: Carpenter's Kit
+  478: Carton
+  479: Car Wheel
+  480: Cash Machine
+  481: Cassette
+  482: Cassette Player
+  483: Castle
+  484: Catamaran
+  485: Cd Player
+  486: Cello
+  487: Cellular Telephone
+  488: Chain
+  489: Chainlink Fence
+  490: Chain Mail
+  491: Chain Saw
+  492: Chest
+  493: Chiffonier
+  494: Chime
+  495: China Cabinet
+  496: Christmas Stocking
+  497: Church
+  498: Cinema
+  499: Cleaver
+  500: Cliff Dwelling
+  501: Cloak
+  502: Clog
+  503: Cocktail Shaker
+  504: Coffee Mug
+  505: Coffeepot
+  506: Coil
+  507: Combination Lock
+  508: Computer Keyboard
+  509: Confectionery
+  510: Container Ship
+  511: Convertible
+  512: Corkscrew
+  513: Cornet
+  514: Cowboy Boot
+  515: Cowboy Hat
+  516: Cradle
+  517: Crane (machine)
+  518: Crash Helmet
+  519: Crate
+  520: Crib
+  521: Crock Pot
+  522: Croquet Ball
+  523: Crutch
+  524: Cuirass
+  525: Dam
+  526: Desk
+  527: Desktop Computer
+  528: Dial Telephone
+  529: Diaper
+  530: Digital Clock
+  531: Digital Watch
+  532: Dining Table
+  533: Dishrag
+  534: Dishwasher
+  535: Disk Brake
+  536: Dock
+  537: Dogsled
+  538: Dome
+  539: Doormat
+  540: Drilling Platform
+  541: Drum
+  542: Drumstick
+  543: Dumbbell
+  544: Dutch Oven
+  545: Electric Fan
+  546: Electric Guitar
+  547: Electric Locomotive
+  548: Entertainment Center
+  549: Envelope
+  550: Espresso Maker
+  551: Face Powder
+  552: Feather Boa
+  553: File
+  554: Fireboat
+  555: Fire Engine
+  556: Fire Screen
+  557: Flagpole
+  558: Flute
+  559: Folding Chair
+  560: Football Helmet
+  561: Forklift
+  562: Fountain
+  563: Fountain Pen
+  564: Four-poster
+  565: Freight Car
+  566: French Horn
+  567: Frying Pan
+  568: Fur Coat
+  569: Garbage Truck
+  570: Gasmask
+  571: Gas Pump
+  572: Goblet
+  573: Go-kart
+  574: Golf Ball
+  575: Golfcart
+  576: Gondola
+  577: Gong
+  578: Gown
+  579: Grand Piano
+  580: Greenhouse
+  581: Grille
+  582: Grocery Store
+  583: Guillotine
+  584: Hair Slide
+  585: Hair Spray
+  586: Half Track
+  587: Hammer
+  588: Hamper
+  589: Hand Blower
+  590: Hand-held Computer
+  591: Handkerchief
+  592: Hard Disc
+  593: Harmonica
+  594: Harp
+  595: Harvester
+  596: Hatchet
+  597: Holster
+  598: Home Theater
+  599: Honeycomb
+  600: Hook
+  601: Hoopskirt
+  602: Horizontal Bar
+  603: Horse Cart
+  604: Hourglass
+  605: Ipod
+  606: Iron
+  607: Jack-o'-lantern
+  608: Jean
+  609: Jeep
+  610: Jersey
+  611: Jigsaw Puzzle
+  612: Jinrikisha
+  613: Joystick
+  614: Kimono
+  615: Knee Pad
+  616: Knot
+  617: Lab Coat
+  618: Ladle
+  619: Lampshade
+  620: Laptop
+  621: Lawn Mower
+  622: Lens Cap
+  623: Letter Opener
+  624: Library
+  625: Lifeboat
+  626: Lighter
+  627: Limousine
+  628: Liner
+  629: Lipstick
   630: Loafer
-  631: lotion
-  632: loudspeaker
-  633: loupe
-  634: lumbermill
-  635: magnetic_compass
-  636: mailbag
-  637: mailbox
-  638: maillot_(tights)
-  639: maillot_(tank_suit)
-  640: manhole_cover
-  641: maraca
-  642: marimba
-  643: mask
-  644: matchstick
-  645: maypole
-  646: maze
-  647: measuring_cup
-  648: medicine_chest
-  649: megalith
-  650: microphone
-  651: microwave
-  652: military_uniform
-  653: milk_can
-  654: minibus
-  655: miniskirt
-  656: minivan
-  657: missile
-  658: mitten
-  659: mixing_bowl
-  660: mobile_home
-  661: Model_T
-  662: modem
-  663: monastery
-  664: monitor
-  665: moped
-  666: mortar
-  667: mortarboard
-  668: mosque
-  669: mosquito_net
-  670: motor_scooter
-  671: mountain_bike
-  672: mountain_tent
-  673: mouse
-  674: mousetrap
-  675: moving_van
-  676: muzzle
-  677: nail
-  678: neck_brace
-  679: necklace
-  680: nipple
-  681: notebook
-  682: obelisk
-  683: oboe
-  684: ocarina
-  685: odometer
-  686: oil_filter
-  687: organ
-  688: oscilloscope
-  689: overskirt
-  690: oxcart
-  691: oxygen_mask
-  692: packet
-  693: paddle
-  694: paddlewheel
-  695: padlock
-  696: paintbrush
-  697: pajama
-  698: palace
-  699: panpipe
-  700: paper_towel
-  701: parachute
-  702: parallel_bars
-  703: park_bench
-  704: parking_meter
-  705: passenger_car
-  706: patio
-  707: pay-phone
-  708: pedestal
-  709: pencil_box
-  710: pencil_sharpener
-  711: perfume
-  712: Petri_dish
-  713: photocopier
-  714: pick
-  715: pickelhaube
-  716: picket_fence
-  717: pickup
-  718: pier
-  719: piggy_bank
-  720: pill_bottle
-  721: pillow
-  722: ping-pong_ball
-  723: pinwheel
-  724: pirate
-  725: pitcher
-  726: plane
-  727: planetarium
-  728: plastic_bag
-  729: plate_rack
-  730: plow
-  731: plunger
-  732: Polaroid_camera
-  733: pole
-  734: police_van
-  735: poncho
-  736: pool_table
-  737: pop_bottle
-  738: pot
-  739: potter's_wheel
-  740: power_drill
-  741: prayer_rug
-  742: printer
-  743: prison
-  744: projectile
-  745: projector
-  746: puck
-  747: punching_bag
-  748: purse
-  749: quill
-  750: quilt
-  751: racer
-  752: racket
-  753: radiator
-  754: radio
-  755: radio_telescope
-  756: rain_barrel
-  757: recreational_vehicle
-  758: reel
-  759: reflex_camera
-  760: refrigerator
-  761: remote_control
-  762: restaurant
-  763: revolver
-  764: rifle
-  765: rocking_chair
-  766: rotisserie
-  767: rubber_eraser
-  768: rugby_ball
-  769: rule
-  770: running_shoe
-  771: safe
-  772: safety_pin
-  773: saltshaker
-  774: sandal
-  775: sarong
-  776: sax
-  777: scabbard
-  778: scale
-  779: school_bus
-  780: schooner
-  781: scoreboard
-  782: screen
-  783: screw
-  784: screwdriver
-  785: seat_belt
-  786: sewing_machine
-  787: shield
-  788: shoe_shop
-  789: shoji
-  790: shopping_basket
-  791: shopping_cart
-  792: shovel
-  793: shower_cap
-  794: shower_curtain
-  795: ski
-  796: ski_mask
-  797: sleeping_bag
-  798: slide_rule
-  799: sliding_door
-  800: slot
-  801: snorkel
-  802: snowmobile
-  803: snowplow
-  804: soap_dispenser
-  805: soccer_ball
-  806: sock
-  807: solar_dish
-  808: sombrero
-  809: soup_bowl
-  810: space_bar
-  811: space_heater
-  812: space_shuttle
-  813: spatula
-  814: speedboat
-  815: spider_web
-  816: spindle
-  817: sports_car
-  818: spotlight
-  819: stage
-  820: steam_locomotive
-  821: steel_arch_bridge
-  822: steel_drum
-  823: stethoscope
-  824: stole
-  825: stone_wall
-  826: stopwatch
-  827: stove
-  828: strainer
-  829: streetcar
-  830: stretcher
-  831: studio_couch
-  832: stupa
-  833: submarine
-  834: suit
-  835: sundial
-  836: sunglass
-  837: sunglasses
-  838: sunscreen
-  839: suspension_bridge
-  840: swab
-  841: sweatshirt
-  842: swimming_trunks
-  843: swing
-  844: switch
-  845: syringe
-  846: table_lamp
-  847: tank
-  848: tape_player
-  849: teapot
-  850: teddy
-  851: television
-  852: tennis_ball
-  853: thatch
-  854: theater_curtain
-  855: thimble
-  856: thresher
-  857: throne
-  858: tile_roof
-  859: toaster
-  860: tobacco_shop
-  861: toilet_seat
-  862: torch
-  863: totem_pole
-  864: tow_truck
-  865: toyshop
-  866: tractor
-  867: trailer_truck
-  868: tray
-  869: trench_coat
-  870: tricycle
-  871: trimaran
-  872: tripod
-  873: triumphal_arch
-  874: trolleybus
-  875: trombone
-  876: tub
-  877: turnstile
-  878: typewriter_keyboard
-  879: umbrella
-  880: unicycle
-  881: upright
-  882: vacuum
-  883: vase
-  884: vault
-  885: velvet
-  886: vending_machine
-  887: vestment
-  888: viaduct
-  889: violin
-  890: volleyball
-  891: waffle_iron
-  892: wall_clock
-  893: wallet
-  894: wardrobe
-  895: warplane
-  896: washbasin
-  897: washer
-  898: water_bottle
-  899: water_jug
-  900: water_tower
-  901: whiskey_jug
-  902: whistle
-  903: wig
-  904: window_screen
-  905: window_shade
-  906: Windsor_tie
-  907: wine_bottle
-  908: wing
-  909: wok
-  910: wooden_spoon
-  911: wool
-  912: worm_fence
-  913: wreck
-  914: yawl
-  915: yurt
-  916: web_site
-  917: comic_book
-  918: crossword_puzzle
-  919: street_sign
-  920: traffic_light
-  921: book_jacket
-  922: menu
-  923: plate
-  924: guacamole
-  925: consomme
-  926: hot_pot
-  927: trifle
-  928: ice_cream
-  929: ice_lolly
-  930: French_loaf
-  931: bagel
-  932: pretzel
-  933: cheeseburger
-  934: hotdog
-  935: mashed_potato
-  936: head_cabbage
-  937: broccoli
-  938: cauliflower
-  939: zucchini
-  940: spaghetti_squash
-  941: acorn_squash
-  942: butternut_squash
-  943: cucumber
-  944: artichoke
-  945: bell_pepper
-  946: cardoon
-  947: mushroom
-  948: Granny_Smith
-  949: strawberry
-  950: orange
-  951: lemon
-  952: fig
-  953: pineapple
-  954: banana
-  955: jackfruit
-  956: custard_apple
-  957: pomegranate
-  958: hay
-  959: carbonara
-  960: chocolate_sauce
-  961: dough
-  962: meat_loaf
-  963: pizza
-  964: potpie
-  965: burrito
-  966: red_wine
-  967: espresso
-  968: cup
-  969: eggnog
-  970: alp
-  971: bubble
-  972: cliff
-  973: coral_reef
-  974: geyser
-  975: lakeside
-  976: promontory
-  977: sandbar
-  978: seashore
-  979: valley
-  980: volcano
-  981: ballplayer
-  982: groom
-  983: scuba_diver
-  984: rapeseed
-  985: daisy
-  986: yellow_lady's_slipper
-  987: corn
-  988: acorn
-  989: hip
-  990: buckeye
-  991: coral_fungus
-  992: agaric
-  993: gyromitra
-  994: stinkhorn
-  995: earthstar
-  996: hen-of-the-woods
-  997: bolete
-  998: ear
-  999: toilet_tissue
+  631: Lotion
+  632: Loudspeaker
+  633: Loupe
+  634: Lumbermill
+  635: Magnetic Compass
+  636: Mailbag
+  637: Mailbox
+  638: Maillot (tights)
+  639: Maillot (tank Suit)
+  640: Manhole Cover
+  641: Maraca
+  642: Marimba
+  643: Mask
+  644: Matchstick
+  645: Maypole
+  646: Maze
+  647: Measuring Cup
+  648: Medicine Chest
+  649: Megalith
+  650: Microphone
+  651: Microwave
+  652: Military Uniform
+  653: Milk Can
+  654: Minibus
+  655: Miniskirt
+  656: Minivan
+  657: Missile
+  658: Mitten
+  659: Mixing Bowl
+  660: Mobile Home
+  661: Model T
+  662: Modem
+  663: Monastery
+  664: Monitor
+  665: Moped
+  666: Mortar
+  667: Mortarboard
+  668: Mosque
+  669: Mosquito Net
+  670: Motor Scooter
+  671: Mountain Bike
+  672: Mountain Tent
+  673: Mouse
+  674: Mousetrap
+  675: Moving Van
+  676: Muzzle
+  677: Nail
+  678: Neck Brace
+  679: Necklace
+  680: Nipple
+  681: Notebook
+  682: Obelisk
+  683: Oboe
+  684: Ocarina
+  685: Odometer
+  686: Oil Filter
+  687: Organ
+  688: Oscilloscope
+  689: Overskirt
+  690: Oxcart
+  691: Oxygen Mask
+  692: Packet
+  693: Paddle
+  694: Paddlewheel
+  695: Padlock
+  696: Paintbrush
+  697: Pajama
+  698: Palace
+  699: Panpipe
+  700: Paper Towel
+  701: Parachute
+  702: Parallel Bars
+  703: Park Bench
+  704: Parking Meter
+  705: Passenger Car
+  706: Patio
+  707: Pay-phone
+  708: Pedestal
+  709: Pencil Box
+  710: Pencil Sharpener
+  711: Perfume
+  712: Petri Dish
+  713: Photocopier
+  714: Pick
+  715: Pickelhaube
+  716: Picket Fence
+  717: Pickup
+  718: Pier
+  719: Piggy Bank
+  720: Pill Bottle
+  721: Pillow
+  722: Ping-pong Ball
+  723: Pinwheel
+  724: Pirate
+  725: Pitcher
+  726: Plane
+  727: Planetarium
+  728: Plastic Bag
+  729: Plate Rack
+  730: Plow
+  731: Plunger
+  732: Polaroid Camera
+  733: Pole
+  734: Police Van
+  735: Poncho
+  736: Pool Table
+  737: Pop Bottle
+  738: Pot
+  739: Potter's Wheel
+  740: Power Drill
+  741: Prayer Rug
+  742: Printer
+  743: Prison
+  744: Projectile
+  745: Projector
+  746: Puck
+  747: Punching Bag
+  748: Purse
+  749: Quill
+  750: Quilt
+  751: Racer
+  752: Racket
+  753: Radiator
+  754: Radio
+  755: Radio Telescope
+  756: Rain Barrel
+  757: Recreational Vehicle
+  758: Reel
+  759: Reflex Camera
+  760: Refrigerator
+  761: Remote Control
+  762: Restaurant
+  763: Revolver
+  764: Rifle
+  765: Rocking Chair
+  766: Rotisserie
+  767: Rubber Eraser
+  768: Rugby Ball
+  769: Rule
+  770: Running Shoe
+  771: Safe
+  772: Safety Pin
+  773: Saltshaker
+  774: Sandal
+  775: Sarong
+  776: Sax
+  777: Scabbard
+  778: Scale
+  779: School Bus
+  780: Schooner
+  781: Scoreboard
+  782: Screen
+  783: Screw
+  784: Screwdriver
+  785: Seat Belt
+  786: Sewing Machine
+  787: Shield
+  788: Shoe Shop
+  789: Shoji
+  790: Shopping Basket
+  791: Shopping Cart
+  792: Shovel
+  793: Shower Cap
+  794: Shower Curtain
+  795: Ski
+  796: Ski Mask
+  797: Sleeping Bag
+  798: Slide Rule
+  799: Sliding Door
+  800: Slot
+  801: Snorkel
+  802: Snowmobile
+  803: Snowplow
+  804: Soap Dispenser
+  805: Soccer Ball
+  806: Sock
+  807: Solar Dish
+  808: Sombrero
+  809: Soup Bowl
+  810: Space Bar
+  811: Space Heater
+  812: Space Shuttle
+  813: Spatula
+  814: Speedboat
+  815: Spider Web
+  816: Spindle
+  817: Sports Car
+  818: Spotlight
+  819: Stage
+  820: Steam Locomotive
+  821: Steel Arch Bridge
+  822: Steel Drum
+  823: Stethoscope
+  824: Stole
+  825: Stone Wall
+  826: Stopwatch
+  827: Stove
+  828: Strainer
+  829: Streetcar
+  830: Stretcher
+  831: Studio Couch
+  832: Stupa
+  833: Submarine
+  834: Suit
+  835: Sundial
+  836: Sunglass
+  837: Sunglasses
+  838: Sunscreen
+  839: Suspension Bridge
+  840: Swab
+  841: Sweatshirt
+  842: Swimming Trunks
+  843: Swing
+  844: Switch
+  845: Syringe
+  846: Table Lamp
+  847: Tank
+  848: Tape Player
+  849: Teapot
+  850: Teddy
+  851: Television
+  852: Tennis Ball
+  853: Thatch
+  854: Theater Curtain
+  855: Thimble
+  856: Thresher
+  857: Throne
+  858: Tile Roof
+  859: Toaster
+  860: Tobacco Shop
+  861: Toilet Seat
+  862: Torch
+  863: Totem Pole
+  864: Tow Truck
+  865: Toyshop
+  866: Tractor
+  867: Trailer Truck
+  868: Tray
+  869: Trench Coat
+  870: Tricycle
+  871: Trimaran
+  872: Tripod
+  873: Triumphal Arch
+  874: Trolleybus
+  875: Trombone
+  876: Tub
+  877: Turnstile
+  878: Typewriter Keyboard
+  879: Umbrella
+  880: Unicycle
+  881: Upright
+  882: Vacuum
+  883: Vase
+  884: Vault
+  885: Velvet
+  886: Vending Machine
+  887: Vestment
+  888: Viaduct
+  889: Violin
+  890: Volleyball
+  891: Waffle Iron
+  892: Wall Clock
+  893: Wallet
+  894: Wardrobe
+  895: Warplane
+  896: Washbasin
+  897: Washer
+  898: Water Bottle
+  899: Water Jug
+  900: Water Tower
+  901: Whiskey Jug
+  902: Whistle
+  903: Wig
+  904: Window Screen
+  905: Window Shade
+  906: Windsor Tie
+  907: Wine Bottle
+  908: Wing
+  909: Wok
+  910: Wooden Spoon
+  911: Wool
+  912: Worm Fence
+  913: Wreck
+  914: Yawl
+  915: Yurt
+  916: Web Site
+  917: Comic Book
+  918: Crossword Puzzle
+  919: Street Sign
+  920: Traffic Light
+  921: Book Jacket
+  922: Menu
+  923: Plate
+  924: Guacamole
+  925: Consomme
+  926: Hot Pot
+  927: Trifle
+  928: Ice Cream
+  929: Ice Lolly
+  930: French Loaf
+  931: Bagel
+  932: Pretzel
+  933: Cheeseburger
+  934: Hotdog
+  935: Mashed Potato
+  936: Head Cabbage
+  937: Broccoli
+  938: Cauliflower
+  939: Zucchini
+  940: Spaghetti Squash
+  941: Acorn Squash
+  942: Butternut Squash
+  943: Cucumber
+  944: Artichoke
+  945: Bell Pepper
+  946: Cardoon
+  947: Mushroom
+  948: Granny Smith
+  949: Strawberry
+  950: Orange
+  951: Lemon
+  952: Fig
+  953: Pineapple
+  954: Banana
+  955: Jackfruit
+  956: Custard Apple
+  957: Pomegranate
+  958: Hay
+  959: Carbonara
+  960: Chocolate Sauce
+  961: Dough
+  962: Meat Loaf
+  963: Pizza
+  964: Potpie
+  965: Burrito
+  966: Red Wine
+  967: Espresso
+  968: Cup
+  969: Eggnog
+  970: Alp
+  971: Bubble
+  972: Cliff
+  973: Coral Reef
+  974: Geyser
+  975: Lakeside
+  976: Promontory
+  977: Sandbar
+  978: Seashore
+  979: Valley
+  980: Volcano
+  981: Ballplayer
+  982: Groom
+  983: Scuba Diver
+  984: Rapeseed
+  985: Daisy
+  986: Yellow Lady's Slipper
+  987: Corn
+  988: Acorn
+  989: Hip
+  990: Buckeye
+  991: Coral Fungus
+  992: Agaric
+  993: Gyromitra
+  994: Stinkhorn
+  995: Earthstar
+  996: Hen-of-the-woods
+  997: Bolete
+  998: Ear
+  999: Toilet Tissue
+stride: 1
+task: classify
+version: 8.2.8

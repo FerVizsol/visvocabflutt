@@ -133,12 +133,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'forgotPassword',
           path: '/forgotPassword',
           builder: (context, params) => const ForgotPasswordWidget(),
-        ),/*
-        FFRoute(
-          name: 'onboarding',
-          path: '/onboarding',
-          builder: (context, params) => OnboardingWidget(),
         ),
+        FFRoute(
+          name: 'flashcardsPage',
+          path: '/flashcardsPage',
+          builder: (context, params) => FlashcardPage(),
+        ),/*
         FFRoute(
           name: 'createBudgetBegin',
           path: '/createBudgetBegin',

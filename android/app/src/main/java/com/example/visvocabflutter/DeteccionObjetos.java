@@ -106,7 +106,6 @@ public class DeteccionObjetos {
             Yaml yaml = new Yaml();
             Map<String, Object> metadata = yaml.load(inputStream);
             Map<String, Object> namesMap = (Map<String, Object>) metadata.get("names");
-            Log.d("NamesMap", namesMap.toString());
             List<String> labels = new ArrayList<>();
             for (Object value : namesMap.values()) {
                 labels.add((String) value);
@@ -114,7 +113,7 @@ public class DeteccionObjetos {
             String label = labels.get(maxIndex);
             Log.d("Result", "Detected object: " + label);
             Toast.makeText(context, label, Toast.LENGTH_SHORT).show();
-            return "Result: " + label;
+            return label;
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

@@ -172,23 +172,19 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Padding(
-                      padding:
-                      EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Container(
-                            width: MediaQuery.sizeOf(context).width * 0.92,
+                            width: MediaQuery.of(context).size.width * 0.92,
                             decoration: BoxDecoration(
                               boxShadow: [
                                 BoxShadow(
                                   blurRadius: 6.0,
                                   color: Color(0x4B1A1F24),
-                                  offset: Offset(
-                                    0.0,
-                                    2.0,
-                                  ),
+                                  offset: Offset(0.0, 2.0),
                                 )
                               ],
                               gradient: LinearGradient(
@@ -200,28 +196,20 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                               borderRadius: BorderRadius.circular(8.0),
                             ),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 0.0, 20.0),
+                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        20.0, 24.0, 20.0, 0.0),
+                                    padding: EdgeInsetsDirectional.fromSTEB(20.0, 24.0, 20.0, 0.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
                                         Text(
-                                        FFLocalizations.of(context).getText(
-                                          'hom1'
-                                        ),
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyMedium
-                                              .override(
+                                          FFLocalizations.of(context).getText('hom1'),
+                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
                                             fontFamily: 'Lexend',
-                                            color:
-                                            FlutterFlowTheme.of(context)
-                                                .textColor,
+                                            color: FlutterFlowTheme.of(context).textColor,
                                             fontSize: 20.0,
                                             letterSpacing: 0.0,
                                           ),
@@ -234,26 +222,17 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                                     color: FlutterFlowTheme.of(context).accent4,
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        20.0, 8.0, 20.0, 0.0),
+                                    padding: EdgeInsetsDirectional.fromSTEB(20.0, 8.0, 20.0, 0.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
                                         Padding(
-                                          padding:
-                                          EdgeInsetsDirectional.fromSTEB(
-                                              0.0, 0.0, 8.0, 0.0),
+                                          padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
                                           child: Text(
-                                            FFLocalizations.of(context).getText(
-                                              'hom2'
-                                            ),
-                                            style: FlutterFlowTheme.of(context)
-                                                .displaySmall
-                                                .override(
+                                            FFLocalizations.of(context).getText('hom2'),
+                                            style: FlutterFlowTheme.of(context).displaySmall.override(
                                               fontFamily: 'Lexend',
-                                              color: FlutterFlowTheme.of(
-                                                  context)
-                                                  .textColor,
+                                              color: FlutterFlowTheme.of(context).textColor,
                                               fontSize: 32.0,
                                               letterSpacing: 0.0,
                                               fontWeight: FontWeight.w300,
@@ -262,8 +241,7 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                                         ),
                                         FaIcon(
                                           FontAwesomeIcons.clock,
-                                          color: FlutterFlowTheme.of(context)
-                                              .primaryText,
+                                          color: FlutterFlowTheme.of(context).primaryText,
                                           size: 25.0,
                                         ),
                                       ],
@@ -272,10 +250,9 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                                 ],
                               ),
                             ),
-                          ),
+                          ).animateOnPageLoad(animationsMap['rowOnPageLoadAnimation']!),
                         ],
-                      ).animateOnPageLoad(
-                          animationsMap['rowOnPageLoadAnimation']!),
+                      ),
                     ),
                     Padding(
                       padding: EdgeInsets.all(16.0),
@@ -283,15 +260,11 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          InkWell(
-                            splashColor: Colors.transparent,
-                            focusColor: Colors.transparent,
-                            hoverColor: Colors.transparent,
-                            highlightColor: Colors.transparent,
-                            onTap: ()async {
+                          GestureDetector(
+                            onTap: () async {
                               context.pushNamed(
                                 'deteccionObjetos',
-                                extra:<String,dynamic>{
+                                extra: <String, dynamic>{
                                   kTransitionInfoKey: TransitionInfo(
                                     hasTransition: true,
                                     transitionType: PageTransitionType.fade,
@@ -300,20 +273,15 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                                 },
                               );
                             },
-                            child:
-                            Container(
-                              width: MediaQuery.sizeOf(context).width * 0.44,
+                            child: Container(
+                              width: MediaQuery.of(context).size.width * 0.44,
                               decoration: BoxDecoration(
-                                color: FlutterFlowTheme.of(context)
-                                    .secondaryBackground,
+                                color: FlutterFlowTheme.of(context).secondaryBackground,
                                 boxShadow: [
                                   BoxShadow(
                                     blurRadius: 4.0,
                                     color: Color(0x3F14181B),
-                                    offset: Offset(
-                                      0.0,
-                                      3.0,
-                                    ),
+                                    offset: Offset(0.0, 3.0),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(8.0),
@@ -328,25 +296,19 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                                     Text(
                                       FFLocalizations.of(context).getText('hom3'),
                                       textAlign: TextAlign.start,
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodySmall
-                                          .override(
+                                      style: FlutterFlowTheme.of(context).bodySmall.override(
                                         fontFamily: 'Lexend',
                                         letterSpacing: 0.0,
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          0.0, 8.0, 0.0, 12.0),
+                                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 12.0),
                                       child: Text(
                                         FFLocalizations.of(context).getText('hom4'),
                                         textAlign: TextAlign.center,
-                                        style: FlutterFlowTheme.of(context)
-                                            .displaySmall
-                                            .override(
+                                        style: FlutterFlowTheme.of(context).displaySmall.override(
                                           fontFamily: 'Lexend',
-                                          color: FlutterFlowTheme.of(context)
-                                              .tertiary,
+                                          color: FlutterFlowTheme.of(context).tertiary,
                                           fontSize: 30.0,
                                           letterSpacing: 0.0,
                                         ),
@@ -356,87 +318,87 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                                       alignment: AlignmentDirectional(0.0, 0.0),
                                       child: Icon(
                                         Icons.camera_alt,
-                                        color:
-                                        FlutterFlowTheme.of(context).tertiary,
+                                        color: FlutterFlowTheme.of(context).tertiary,
                                         size: 50.0,
                                       ),
                                     ),
                                   ],
                                 ),
                               ),
-                            ).animateOnPageLoad(
-                                animationsMap['containerOnPageLoadAnimation1']!),
+                            ).animateOnPageLoad(animationsMap['containerOnPageLoadAnimation1']!),
                           ),
-                          Container(
-                            width: MediaQuery.sizeOf(context).width * 0.44,
-                            decoration: BoxDecoration(
-                              color: FlutterFlowTheme.of(context)
-                                  .secondaryBackground,
-                              boxShadow: [
-                                BoxShadow(
-                                  blurRadius: 4.0,
-                                  color: Color(0x3F14181B),
-                                  offset: Offset(
-                                    0.0,
-                                    3.0,
+                          GestureDetector(
+                            onTap: () async {
+                              context.pushNamed(
+                                'flashcardsPage',
+                                extra: <String, dynamic>{
+                                  kTransitionInfoKey: TransitionInfo(
+                                    hasTransition: true,
+                                    transitionType: PageTransitionType.fade,
+                                    duration: Duration(milliseconds: 100),
                                   ),
-                                )
-                              ],
-                              borderRadius: BorderRadius.circular(8.0),
-                            ),
-                            child: Padding(
-                              padding: EdgeInsets.all(12.0),
-                              child: Column(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    FFLocalizations.of(context).getText('hom5'),
-                                    textAlign: TextAlign.start,
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodySmall
-                                        .override(
-                                      fontFamily: 'Lexend',
-                                      letterSpacing: 0.0,
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 8.0, 0.0, 12.0),
-                                    child: Text(
-                                      FFLocalizations.of(context).getText('hom6'),
-                                      textAlign: TextAlign.center,
-                                      style: FlutterFlowTheme.of(context)
-                                          .displaySmall
-                                          .override(
+                                },
+                              );
+                            },
+                            child: Container(
+                              width: MediaQuery.of(context).size.width * 0.44,
+                              decoration: BoxDecoration(
+                                color: FlutterFlowTheme.of(context).secondaryBackground,
+                                boxShadow: [
+                                  BoxShadow(
+                                    blurRadius: 4.0,
+                                    color: Color(0x3F14181B),
+                                    offset: Offset(0.0, 3.0),
+                                  )
+                                ],
+                                borderRadius: BorderRadius.circular(8.0),
+                              ),
+                              child: Padding(
+                                padding: EdgeInsets.all(12.0),
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      FFLocalizations.of(context).getText('hom5'),
+                                      textAlign: TextAlign.start,
+                                      style: FlutterFlowTheme.of(context).bodySmall.override(
                                         fontFamily: 'Lexend',
-                                        color: FlutterFlowTheme.of(context)
-                                            .tertiary,
-                                        fontSize: 32.0,
                                         letterSpacing: 0.0,
                                       ),
                                     ),
-                                  ),
-                                  Align(
-                                    alignment: AlignmentDirectional(0.0, 0.0),
-                                    child: Icon(
-                                      Icons.menu_book,
-                                      color:
-                                      FlutterFlowTheme.of(context).tertiary,
-                                      size: 50.0,
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 12.0),
+                                      child: Text(
+                                        FFLocalizations.of(context).getText('hom6'),
+                                        textAlign: TextAlign.center,
+                                        style: FlutterFlowTheme.of(context).displaySmall.override(
+                                          fontFamily: 'Lexend',
+                                          color: FlutterFlowTheme.of(context).tertiary,
+                                          fontSize: 32.0,
+                                          letterSpacing: 0.0,
+                                        ),
+                                      ),
                                     ),
-                                  ),
-                                ],
+                                    Align(
+                                      alignment: AlignmentDirectional(0.0, 0.0),
+                                      child: Icon(
+                                        Icons.menu_book,
+                                        color: FlutterFlowTheme.of(context).tertiary,
+                                        size: 50.0,
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
-                            ),
-                          ).animateOnPageLoad(
-                              animationsMap['containerOnPageLoadAnimation2']!),
+                            ).animateOnPageLoad(animationsMap['containerOnPageLoadAnimation2']!),
+                          ),
                         ],
                       ),
                     ),
                     Container(
-                      width: MediaQuery.sizeOf(context).width * 1.0,
+                      width: MediaQuery.of(context).size.width * 1.0,
                       decoration: BoxDecoration(
                         color: FlutterFlowTheme.of(context).secondaryBackground,
                         borderRadius: BorderRadius.only(
@@ -446,8 +408,7 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                           topRight: Radius.circular(16.0),
                         ),
                       ),
-                    ).animateOnPageLoad(
-                        animationsMap['containerOnPageLoadAnimation3']!),
+                    ).animateOnPageLoad(animationsMap['containerOnPageLoadAnimation3']!),
                   ],
                 ),
               ),
@@ -471,6 +432,7 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
       ),
     );
   }
+
 }
 
 class NavBarPage extends StatefulWidget {

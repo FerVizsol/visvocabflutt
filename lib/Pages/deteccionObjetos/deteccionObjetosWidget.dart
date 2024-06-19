@@ -9,10 +9,11 @@ import 'dart:typed_data';
 import 'deteccionObjetosModel.dart';
 export 'deteccionObjetosModel.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:hive/hive.dart';
+import 'package:visvocabflutter/flashcard.dart';
 
 class DeteccionObjetosWidget extends StatefulWidget {
   const DeteccionObjetosWidget({super.key});
-
   @override
   State<DeteccionObjetosWidget> createState() => _DeteccionObjetosWidgetState();
 }
@@ -34,21 +35,64 @@ class _DeteccionObjetosWidgetState extends State<DeteccionObjetosWidget> {
     super.dispose();
   }
 
+  Future<void> _showPreviewDialog(Uint8List imageBytes, String label) async {
+    return showDialog<void>(
+      context: context,
+      barrierDismissible: false, // No se puede cerrar tocando fuera del diálogo
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text('Confirmar Guardado'),
+          content: SingleChildScrollView(
+            child: ListBody(
+              children: <Widget>[
+                Image.memory(imageBytes),
+                SizedBox(height: 20),
+                Text('Etiqueta: $label'),
+              ],
+            ),
+          ),
+          actions: <Widget>[
+            TextButton(
+              child: Text('Cancelar'),
+              onPressed: () {
+                Navigator.of(context).pop(); // Cerrar el diálogo
+              },
+            ),
+            TextButton(
+              child: Text('Guardar'),
+              onPressed: () {
+                _saveFlashcard(imageBytes, label);
+                Navigator.of(context).pop(); // Cerrar el diálogo
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  Future<void> _saveFlashcard(Uint8List imageBytes, String label) async {
+    final flashcardBox = Hive.box<Flashcard>('flashcards');
+    final newFlashcard = Flashcard(imageBytes, label);
+    flashcardBox.add(newFlashcard);
+    Fluttertoast.showToast(
+        msg: "Flashcard guardada",
+        toastLength: Toast.LENGTH_SHORT,
+        gravity: ToastGravity.BOTTOM,
+        timeInSecForIosWeb: 1,
+        backgroundColor: Colors.black,
+        textColor: Colors.white,
+        fontSize: 16.0
+    );
+  }
+
   Future<void> _detectObject(Uint8List imageBytes) async {
     try {
       final result = await platform.invokeMethod('detectObject', imageBytes);
-      Fluttertoast.showToast(
-          msg: "Objeto Detectado : $result" ,
-          toastLength: Toast.LENGTH_SHORT,
-          gravity: ToastGravity.BOTTOM,
-          timeInSecForIosWeb: 1,
-          backgroundColor: Colors.black,
-          textColor: Colors.white,
-          fontSize: 16.0
-      );
+      await _showPreviewDialog(imageBytes, result);
     } on PlatformException catch (e) {
       Fluttertoast.showToast(
-          msg: "Deteccion Fallida" ,
+          msg: "Detección Fallida: ${e.message}",
           toastLength: Toast.LENGTH_SHORT,
           gravity: ToastGravity.BOTTOM,
           timeInSecForIosWeb: 1,

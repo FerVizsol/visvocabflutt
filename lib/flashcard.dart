@@ -4,7 +4,7 @@ import 'package:hive/hive.dart';
 part 'flashcard.g.dart';
 
 @HiveType(typeId: 0)
-class Flashcard {
+class Flashcard extends HiveObject {
   @HiveField(0)
   Uint8List image;
 

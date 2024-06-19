@@ -4,33 +4,35 @@ import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:visvocabflutter/flashcard.dart';
 
-import '../../flutter_flow/flutter_flow_theme.dart'; // Ajusta esta importación según la estructura de tu proyecto
+import '../../flutter_flow/flutter_flow_theme.dart';
+import '../../flutter_flow/internationalization.dart';
 
 class FlashcardPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: FlutterFlowTheme.of(context).primary, // Cambia el color de fondo del app bar según tu tema
+        backgroundColor: FlutterFlowTheme.of(context).primary,
         title: Text(
-          'Lista de Flashcards',
-          style: TextStyle(
-            fontSize: 20.0,
-            fontWeight: FontWeight.bold,
-            color: Colors.white, // Cambia el color del texto del título según tu tema
+          FFLocalizations.of(context).getText('flash2'),
+          style: FlutterFlowTheme.of(context).headlineMedium.override(
+            fontFamily: 'Lexend',
+            color: Colors.white,
+            fontSize: 22.0,
+            fontWeight: FontWeight.w600,
           ),
         ),
-        centerTitle: true, // Centra el título en el app bar
-        elevation: 0.0, // Elimina la sombra del app bar
+        centerTitle: true,
+        elevation: 0.0,
       ),
       body: FutureBuilder<List<Flashcard>?>(
-        future: HiveManager.getFlashcards(), // Usa List<Flashcard>? para que coincida con el tipo de futuro nullable
+        future: HiveManager.getFlashcards(),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return Center(child: CircularProgressIndicator());
           } else {
             if (snapshot.hasError || snapshot.data == null) {
-              return Center(child: Text('No se encontraron flashcards.'));
+              return Center(child: Text(FFLocalizations.of(context).getText('flash1')));//No se encontraron flashcards
             } else {
               final flashcards = snapshot.data!;
               return ListView.builder(
@@ -40,19 +42,19 @@ class FlashcardPage extends StatelessWidget {
                   return Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
                     child: Card(
-                      elevation: 2.0, // Añade elevación al card
+                      elevation: 2.0,
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12.0), // Ajusta el radio de borde del card
+                        borderRadius: BorderRadius.circular(12.0),
                       ),
                       child: ListTile(
-                        contentPadding: EdgeInsets.all(12.0), // Ajusta el relleno interior del ListTile
+                        contentPadding: EdgeInsets.all(12.0),
                         leading: ClipRRect(
-                          borderRadius: BorderRadius.circular(8.0), // Ajusta el radio de borde de la imagen
+                          borderRadius: BorderRadius.circular(8.0),
                           child: Image.memory(
                             flashcard.image,
                             width: 70.0,
                             height: 70.0,
-                            fit: BoxFit.cover, // Ajusta el modo de ajuste de la imagen
+                            fit: BoxFit.cover,
                           ),
                         ),
                         title: Text(
@@ -61,7 +63,7 @@ class FlashcardPage extends StatelessWidget {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        subtitle: Text('Repetitions: ${flashcard.repetitions}'),
+                        subtitle: Text( '${FFLocalizations.of(context).getText('flash3')}${flashcard.easeFactor}'),
                       ),
                     ),
                   );

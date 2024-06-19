@@ -2624,6 +2624,94 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'hom6':{
       'en':'MY VOCAB'
       ,'es':'MI VOCAB',
-    }
+    },
+    'flash1':{
+      'en':'Not flashcards found, go detect new vocab!',
+      'es':'No se encontraron flashcards, detecta nuevo vocabulario'
+    },
+    'flash2':{
+      'en':'Flashcard List',
+      'es':'Lista de Flashcards'
+    },
+    'flash3':{
+      'en':'Word Rating:',
+      'es':'Calificacion de la palabra:'
+    },
+    'revflash1':{
+      'en':'Review Flashcards:',
+      'es':'Repaso de Flashcards'
+    },
+    'revflash2':{
+      'en':'No flashcards to review',
+      'es':'No hay flashcards para repasar'
+    },
+    'revflash3':{
+    'en':'Next review:',
+    'es':'Siguiente repaso:'
+  },
+    'detect1':{
+    'en':'Confirm save',
+    'es':'Confirmar Guardado'
+    },
+    'detect2':{
+    'en':'Label',
+    'es':'Etiqueta:'
+    },
+    'detect3':{
+    'en':'Cancel',
+    'es':'Cancelar'
+    },
+    'detect5':{
+      'en':'Save',
+      'es':'Guardar'
+    },
+    'detect6':{
+      'en':'Flashcard Saved',
+      'es':'Flashcard Guardada'
+    },
+    'detect7':{
+      'en':'Detection Failed',
+      'es':'Deteccion Fallida'
+    },
+    'detect8':{
+      'en':'Object Detection',
+      'es':'Detectar Objetos'
+    },
+    'detect9':{
+      'en':"Add new objects using your phone's camera",
+      'es':'Añade nuevos objetos a través de la cámara'
+    },
+    'detect10':{
+      'en':"TAKE A PIC",
+      'es':'TOMAR FOTO DE OBJETO'
+    },
+    'detect11':{
+      'en':"Upload an image from your phone's gallery",
+      'es':'Subir una imagen del objeto a través de la galería'
+    },
+    'detect12':{
+      'en':"UPLOAD FROM GALLERY",
+      'es':'SUBIR DESDE GALERÍA'
+    },
+    'revpage1':{
+      'en':"Review Flashcard",
+      'es':'Repasar Flashcard'
+    },
+    'revpage2':{
+      'en':"Answer",
+      'es':'Respuesta'
+    },
+    'revpage3':{
+      'en':"Submit",
+      'es':'Enviar'
+    },
+    'practice1':{
+      'en':"All done!",
+      'es':'Todo hecho!'
+    },
+    'practice2':{
+      'en':"Remaining",
+      'es':'Restantes'
+    },
   },
 ].reduce((a, b) => a..addAll(b));

@@ -25,11 +25,9 @@ class CompleteProfileModel extends FlutterFlowModel<CompleteProfileWidget> {
   FFUploadedFile(bytes: Uint8List.fromList([]));
   String uploadedFileUrl = '';
 
-  // State field(s) for yourName widget.
   FocusNode? yourNameFocusNode;
   TextEditingController? yourNameTextController;
   String? Function(BuildContext, String?)? yourNameTextControllerValidator;
-  // State field(s) for yourAge widget.
   FocusNode? yourAgeFocusNode;
   TextEditingController? yourAgeTextController;
   String? Function(BuildContext, String?)? yourAgeTextControllerValidator;

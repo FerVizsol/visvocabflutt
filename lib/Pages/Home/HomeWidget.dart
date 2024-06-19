@@ -13,6 +13,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'HomeModel.dart';
+import 'package:visvocabflutter/flashcard.dart';
 export 'HomeModel.dart';
 
 class HomeWidget extends StatefulWidget {
@@ -156,6 +157,20 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
     super.dispose();
   }
 
+  Future<String> _getReviewText(BuildContext context) async {
+    final flashcards = await HiveManager.getFlashcards(); // Obtiene la lista de flashcards desde Hive
+    final flashcardsToReview = flashcards.where((flashcard) => flashcard.nextReviewDate.isBefore(DateTime.now())).toList();
+
+    if (flashcardsToReview.isNotEmpty) {
+      int flashcardCount = flashcardsToReview.length;
+      String reviewText = '$flashcardCount ${FFLocalizations.of(context).getText('practice2')}'; // "Restantes"
+      return reviewText;
+    } else {
+      return FFLocalizations.of(context).getText('practice1');
+    }
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -177,80 +192,109 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Container(
-                            width: MediaQuery.of(context).size.width * 0.92,
-                            decoration: BoxDecoration(
-                              boxShadow: [
-                                BoxShadow(
-                                  blurRadius: 6.0,
-                                  color: Color(0x4B1A1F24),
-                                  offset: Offset(0.0, 2.0),
-                                )
-                              ],
-                              gradient: LinearGradient(
-                                colors: [Color(0xFF00968A), Color(0xFFF2A384)],
-                                stops: [0.0, 1.0],
-                                begin: AlignmentDirectional(0.94, -1.0),
-                                end: AlignmentDirectional(-0.94, 1.0),
+                          GestureDetector(
+                            onTap: () async {
+                              context.pushNamed(
+                                'ReviewFlashcard',
+                                extra: <String, dynamic>{
+                                  kTransitionInfoKey: TransitionInfo(
+                                    hasTransition: true,
+                                    transitionType: PageTransitionType.fade,
+                                    duration: Duration(milliseconds: 100),
+                                  ),
+                                },
+                              );
+                            },
+                            child: Container(
+                              width: MediaQuery.of(context).size.width * 0.92,
+                              decoration: BoxDecoration(
+                                boxShadow: [
+                                  BoxShadow(
+                                    blurRadius: 6.0,
+                                    color: Color(0x4B1A1F24),
+                                    offset: Offset(0.0, 2.0),
+                                  )
+                                ],
+                                gradient: LinearGradient(
+                                  colors: [Color(0xFF00968A), Color(0xFFF2A384)],
+                                  stops: [0.0, 1.0],
+                                  begin: AlignmentDirectional(0.94, -1.0),
+                                  end: AlignmentDirectional(-0.94, 1.0),
+                                ),
+                                borderRadius: BorderRadius.circular(8.0),
                               ),
-                              borderRadius: BorderRadius.circular(8.0),
-                            ),
-                            child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
-                              child: Column(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(20.0, 24.0, 20.0, 0.0),
-                                    child: Row(
-                                      mainAxisSize: MainAxisSize.max,
-                                      children: [
-                                        Text(
-                                          FFLocalizations.of(context).getText('hom1'),
-                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                            fontFamily: 'Lexend',
-                                            color: FlutterFlowTheme.of(context).textColor,
-                                            fontSize: 20.0,
-                                            letterSpacing: 0.0,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                  Divider(
-                                    thickness: 1.0,
-                                    color: FlutterFlowTheme.of(context).accent4,
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(20.0, 8.0, 20.0, 0.0),
-                                    child: Row(
-                                      mainAxisSize: MainAxisSize.max,
-                                      children: [
-                                        Padding(
-                                          padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
-                                          child: Text(
-                                            FFLocalizations.of(context).getText('hom2'),
-                                            style: FlutterFlowTheme.of(context).displaySmall.override(
+                              child: Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.max,
+                                  children: [
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(20.0, 24.0, 20.0, 0.0),
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        children: [
+                                          Text(
+                                            FFLocalizations.of(context).getText('hom1'),
+                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
                                               fontFamily: 'Lexend',
                                               color: FlutterFlowTheme.of(context).textColor,
-                                              fontSize: 32.0,
+                                              fontSize: 20.0,
                                               letterSpacing: 0.0,
-                                              fontWeight: FontWeight.w300,
                                             ),
                                           ),
-                                        ),
-                                        FaIcon(
-                                          FontAwesomeIcons.clock,
-                                          color: FlutterFlowTheme.of(context).primaryText,
-                                          size: 25.0,
-                                        ),
-                                      ],
+                                        ],
+                                      ),
                                     ),
-                                  ),
-                                ],
+                                    Divider(
+                                      thickness: 1.0,
+                                      color: FlutterFlowTheme.of(context).accent4,
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(20.0, 8.0, 20.0, 0.0),
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        children: [
+                                          FutureBuilder<String>(
+                                            future: _getReviewText(context),
+                                            builder: (context, snapshot) {
+                                              if (snapshot.connectionState == ConnectionState.waiting) {
+                                                return CircularProgressIndicator(); // Mientras se carga la información
+                                              } else if (snapshot.hasError) {
+                                                return Text('Error: ${snapshot.error}'); // Manejo de errores si ocurre alguno
+                                              } else {
+                                                return Padding(
+                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
+                                                  child: Row(
+                                                    children: [
+                                                      Text(
+                                                        snapshot.data ?? "No flashcards to review",
+                                                        style: FlutterFlowTheme.of(context).displaySmall.override(
+                                                          fontFamily: 'Lexend',
+                                                          color: FlutterFlowTheme.of(context).textColor,
+                                                          fontSize: 32.0,
+                                                          letterSpacing: 0.0,
+                                                          fontWeight: FontWeight.w300,
+                                                        ),
+                                                      ),
+                                                      FaIcon(
+                                                        FontAwesomeIcons.clock,
+                                                        color: FlutterFlowTheme.of(context).primaryText,
+                                                        size: 25.0,
+                                                      ),
+                                                    ],
+                                                  ),
+                                                );
+                                              }
+                                            },
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
-                            ),
-                          ).animateOnPageLoad(animationsMap['rowOnPageLoadAnimation']!),
+                            ).animateOnPageLoad(animationsMap['rowOnPageLoadAnimation']!),
+                          ),
                         ],
                       ),
                     ),

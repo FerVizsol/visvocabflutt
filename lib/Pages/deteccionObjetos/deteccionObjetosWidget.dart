@@ -41,25 +41,25 @@ class _DeteccionObjetosWidgetState extends State<DeteccionObjetosWidget> {
       barrierDismissible: false, // No se puede cerrar tocando fuera del diálogo
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Text('Confirmar Guardado'),
+          title: Text(FFLocalizations.of(context).getText('detect1')),
           content: SingleChildScrollView(
             child: ListBody(
               children: <Widget>[
                 Image.memory(imageBytes),
                 SizedBox(height: 20),
-                Text('Etiqueta: $label'),
+                Text('${FFLocalizations.of(context).getText('detect2')}$label'),
               ],
             ),
           ),
           actions: <Widget>[
             TextButton(
-              child: Text('Cancelar'),
+              child: Text(FFLocalizations.of(context).getText('detect3')),
               onPressed: () {
                 Navigator.of(context).pop(); // Cerrar el diálogo
               },
             ),
             TextButton(
-              child: Text('Guardar'),
+              child: Text(FFLocalizations.of(context).getText('detect5')),
               onPressed: () {
                 _saveFlashcard(imageBytes, label);
                 Navigator.of(context).pop(); // Cerrar el diálogo
@@ -76,7 +76,7 @@ class _DeteccionObjetosWidgetState extends State<DeteccionObjetosWidget> {
     final newFlashcard = Flashcard(imageBytes, label);
     flashcardBox.add(newFlashcard);
     Fluttertoast.showToast(
-        msg: "Flashcard guardada",
+        msg: FFLocalizations.of(context).getText('detect6'),
         toastLength: Toast.LENGTH_SHORT,
         gravity: ToastGravity.BOTTOM,
         timeInSecForIosWeb: 1,
@@ -92,7 +92,7 @@ class _DeteccionObjetosWidgetState extends State<DeteccionObjetosWidget> {
       await _showPreviewDialog(imageBytes, result);
     } on PlatformException catch (e) {
       Fluttertoast.showToast(
-          msg: "Detección Fallida: ${e.message}",
+          msg: "${FFLocalizations.of(context).getText('detect7')}${e.message}",
           toastLength: Toast.LENGTH_SHORT,
           gravity: ToastGravity.BOTTOM,
           timeInSecForIosWeb: 1,
@@ -113,7 +113,7 @@ class _DeteccionObjetosWidgetState extends State<DeteccionObjetosWidget> {
         title: Align(
           alignment: AlignmentDirectional(0.0, 0.0),
           child: Text(
-            'Detectar Objetos',
+            FFLocalizations.of(context).getText('detect8'),
             textAlign: TextAlign.center,
             style: FlutterFlowTheme.of(context).headlineMedium.override(
               fontFamily: 'Lexend',
@@ -183,7 +183,7 @@ class _DeteccionObjetosWidgetState extends State<DeteccionObjetosWidget> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            'Agregar nuevos objetos a través de la cámara',
+                            FFLocalizations.of(context).getText('detect9'),
                             textAlign: TextAlign.start,
                             style: FlutterFlowTheme.of(context).bodySmall.override(
                               fontFamily: 'Lexend',
@@ -192,7 +192,7 @@ class _DeteccionObjetosWidgetState extends State<DeteccionObjetosWidget> {
                           Padding(
                             padding: EdgeInsets.only(top: 8.0, bottom: 12.0),
                             child: Text(
-                              'TOMAR FOTO DE OBJETO',
+                              FFLocalizations.of(context).getText('detect10'),
                               textAlign: TextAlign.center,
                               style: FlutterFlowTheme.of(context).displaySmall.override(
                                 fontFamily: 'Lexend',
@@ -263,7 +263,7 @@ class _DeteccionObjetosWidgetState extends State<DeteccionObjetosWidget> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            'Subir una imagen del objeto a través de la galería',
+                            FFLocalizations.of(context).getText('detect11'),
                             textAlign: TextAlign.start,
                             style: FlutterFlowTheme.of(context).bodySmall.override(
                               fontFamily: 'Lexend',
@@ -272,7 +272,7 @@ class _DeteccionObjetosWidgetState extends State<DeteccionObjetosWidget> {
                           Padding(
                             padding: EdgeInsets.only(top: 8.0, bottom: 12.0),
                             child: Text(
-                              'SUBIR DESDE GALERÍA',
+                              FFLocalizations.of(context).getText('detect12'),
                               textAlign: TextAlign.center,
                               style: FlutterFlowTheme.of(context).displaySmall.override(
                                 fontFamily: 'Lexend',

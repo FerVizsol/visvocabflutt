@@ -9,6 +9,7 @@ import 'package:visvocabflutter/Pages/changePassword/changePasswordWidget.dart';
 import 'package:visvocabflutter/Pages/completePerfil/completePerfilWidget.dart';
 import 'package:visvocabflutter/Pages/deteccionObjetos/deteccionObjetosWidget.dart';
 import 'package:visvocabflutter/Pages/editProfile/editProfileWidget.dart';
+import 'package:visvocabflutter/Pages/flashcards/ReviewFlashcardWidget.dart';
 import 'package:visvocabflutter/Pages/forgotPassword/forgotPasswordWidget.dart';
 import 'package:visvocabflutter/Pages/registerPage/registerPageWidget.dart';
 import '../../Pages/Home/HomeWidget.dart';
@@ -138,12 +139,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'flashcardsPage',
           path: '/flashcardsPage',
           builder: (context, params) => FlashcardPage(),
-        ),/*
-        FFRoute(
-          name: 'createBudgetBegin',
-          path: '/createBudgetBegin',
-          builder: (context, params) => CreateBudgetBeginWidget(),
         ),
+        FFRoute(
+          name: 'ReviewFlashcard',
+          path: '/ReviewFlashcard',
+          builder: (context, params) => const ReviewFlashcardWidget(),
+        ),/*
         FFRoute(
           name: 'MY_Card',
           path: '/mYCard',
@@ -451,10 +452,10 @@ class FFRoute {
               : builder(context, ffParams);
           final child = appStateNotifier.loading
               ? Container(
-                  color: Colors.white,
+                  color: FlutterFlowTheme.of(context).primaryBackground,
                   child: Center(
                     child: Image.asset(
-                      'assets/images/Sin_titulo-1.png',
+                      'assets/images/visvocab-darktheme.png',
                       width: MediaQuery.sizeOf(context).width * 0.8,
                       fit: BoxFit.fitWidth,
                     ),

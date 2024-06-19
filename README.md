@@ -1,10 +1,16 @@
 # visvocabflutter
 
-Un proyecto de SRS para el aprendizaje de Ingles usando Yolo Ultralytics V8 Classify 
-este proyecto permite la deteccion de objetos desde un dispositivo movil usando la camara
-o galeria. Una vez procesada la imagen y detectada la clase del objeto este es guardado en
-un sistema SRS.
+A new Flutter project.
 
-## Contexto
+## Getting Started
 
-Este proyecto usa Flutter, Firebase, Modelo de Ultralytics Yolov8 de classify y un sistema SRS nativo usando sqlite.
+This project is a starting point for a Flutter application.
+
+A few resources to get you started if this is your first Flutter project:
+
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
